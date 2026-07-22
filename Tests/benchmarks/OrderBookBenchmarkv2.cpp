@@ -200,5 +200,3 @@ void BM_Pipeline_ImmediateMatching(benchmark::State& state) {
 }
 BENCHMARK_TEMPLATE(BM_Pipeline_ImmediateMatching, MultisetOrderBook)->Unit(benchmark::kMicrosecond);
 BENCHMARK_TEMPLATE(BM_Pipeline_ImmediateMatching, BinaryOrderBook)->Unit(benchmark::kMicrosecond);
-
-BENCHMARK_MAIN();
