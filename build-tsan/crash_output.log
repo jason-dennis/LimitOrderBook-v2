@@ -1,0 +1,12 @@
+Running main() from /Users/dennis/Desktop/Portofolio/LimitOrderBook/build-tsan/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = CoreEngineTest.CreateOrder_EventuallyAppearsInGetOrders
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from CoreEngineTest
+[ RUN      ] CoreEngineTest.CreateOrder_EventuallyAppearsInGetOrders
+[       OK ] CoreEngineTest.CreateOrder_EventuallyAppearsInGetOrders (16 ms)
+[----------] 1 test from CoreEngineTest (16 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (16 ms total)
+[  PASSED  ] 1 test.

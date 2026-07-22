@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="LimitOrderBook" targetName="skip_with_error_test" />
+      <config projectName="LimitOrderBook" targetName="perf_counters_test" />
+      <config projectName="LimitOrderBook" targetName="register_benchmark_test" />
+      <config projectName="LimitOrderBook" targetName="uninstall" />
+      <config projectName="LimitOrderBook" targetName="benchmark" />
+      <config projectName="LimitOrderBook" targetName="FullTest" />
+      <config projectName="LimitOrderBook" targetName="trading_lib_cov" />
+      <config projectName="LimitOrderBook" targetName="update_mappings" />
+      <config projectName="LimitOrderBook" targetName="args_product_test" />
+      <config projectName="LimitOrderBook" targetName="trading_lib" />
+      <config projectName="LimitOrderBook" targetName="LimitOrderBook" />
+      <config projectName="LimitOrderBook" targetName="cxx03_test" />
+      <config projectName="LimitOrderBook" targetName="string_util_gtest" />
+      <config projectName="LimitOrderBook" targetName="glfw" />
+      <config projectName="LimitOrderBook" targetName="statistics_gtest" />
+      <config projectName="LimitOrderBook" targetName="multiple_ranges_test" />
+      <config projectName="LimitOrderBook" targetName="output_test_helper" />
+      <config projectName="LimitOrderBook" targetName="gtest_main" />
+      <config projectName="LimitOrderBook" targetName="benchmark_random_interleaving_gtest" />
+      <config projectName="LimitOrderBook" targetName="templated_fixture_test" />
+      <config projectName="LimitOrderBook" targetName="perf_counters_gtest" />
+      <config projectName="LimitOrderBook" targetName="diagnostics_test" />
+      <config projectName="LimitOrderBook" targetName="spec_arg_test" />
+      <config projectName="LimitOrderBook" targetName="basic_test" />
+      <config projectName="LimitOrderBook" targetName="spec_arg_verbosity_test" />
+      <config projectName="LimitOrderBook" targetName="internal_threading_test" />
+      <config projectName="LimitOrderBook" targetName="donotoptimize_test" />
+      <config projectName="LimitOrderBook" targetName="imgui_lib" />
+      <config projectName="LimitOrderBook" targetName="repetitions_test" />
+      <config projectName="LimitOrderBook" targetName="reporter_output_test" />
+      <config projectName="LimitOrderBook" targetName="commandlineflags_gtest" />
+      <config projectName="LimitOrderBook" targetName="time_unit_gtest" />
+      <config projectName="LimitOrderBook" targetName="gmock_main" />
+      <config projectName="LimitOrderBook" targetName="map_test" />
+      <config projectName="LimitOrderBook" targetName="benchmark_min_time_flag_iters_test" />
+      <config projectName="LimitOrderBook" targetName="options_test" />
+      <config projectName="LimitOrderBook" targetName="report_aggregates_only_test" />
+      <config projectName="LimitOrderBook" targetName="benchmark_name_gtest" />
+      <config projectName="LimitOrderBook" targetName="memory_manager_test" />
+      <config projectName="LimitOrderBook" targetName="run_benchmarks" />
+      <config projectName="LimitOrderBook" targetName="filter_test" />
+      <config projectName="LimitOrderBook" targetName="benchmark_main" />
+      <config projectName="LimitOrderBook" targetName="tcp_server_test" />
+      <config projectName="LimitOrderBook" targetName="run_tests" />
+      <config projectName="LimitOrderBook" targetName="min_time_parse_gtest" />
+      <config projectName="LimitOrderBook" targetName="fixture_test" />
+      <config projectName="LimitOrderBook" targetName="link_main_test" />
+      <config projectName="LimitOrderBook" targetName="user_counters_test" />
+      <config projectName="LimitOrderBook" targetName="user_counters_tabular_test" />
+      <config projectName="LimitOrderBook" targetName="benchmark_min_time_flag_time_test" />
+      <config projectName="LimitOrderBook" targetName="user_counters_thousands_test" />
+      <config projectName="LimitOrderBook" targetName="gtest" />
+      <config projectName="LimitOrderBook" targetName="complexity_test" />
+      <config projectName="LimitOrderBook" targetName="benchmark_gtest" />
+      <config projectName="LimitOrderBook" targetName="benchmark_setup_teardown_test" />
+      <config projectName="LimitOrderBook" targetName="gmock" />
+      <config projectName="LimitOrderBook" targetName="benchmark_test" />
+      <config projectName="LimitOrderBook" targetName="display_aggregates_only_test" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Release" ENABLED="true" CONFIG_NAME="Release" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e3d535dd-94c8-4bea-83c1-1ab4a636eead" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Tests/Concurrency/TestConcurrency.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/Concurrency/TestLockFreeQueue.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/Concurrency/TestWorker.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/FullTest.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/Memory/TestOrderPool.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/Networking/TestProtocol.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/Networking/TestTcpServer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/Routing/TestOrderRouter.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/TestEndToEnd.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/benchmarks/MultithreadedBenchmark.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/benchmarks/OrderBookBenchmarkv2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Concurrency/ClientSimulator.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Concurrency/LockFreeQueue.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Concurrency/OrderQueue.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Concurrency/SymbolWorker.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Concurrency/Worker.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Domain/OrderRequest.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Domain/Time.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Domain/TradePod.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Memory/OrderPool.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Networking/Protocol.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Networking/TcpServer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Routing/OrderRouter.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/python_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concurrency/ClientSimulator.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concurrency/OrderQueue.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concurrency/SymbolWorker.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Concurrency/Worker.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Memory/OrderPool.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Networking/Protocol.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Networking/TcpServer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Networking/TestServer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Routing/OrderRouter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Engine/TestAppEngine.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Engine/TestCoreEngine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Engine/TestCoreEngine.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Engine/TestMatchingEngine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Engine/TestMatchingEngine.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Storage/test_binaryorderbook.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Storage/test_binaryorderbook.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Storage/test_multiset_storage.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Storage/test_multiset_storage.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/benchmarks/OrderBookBenchmark.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Domain/order.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Domain/order.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Engine/AppEngine.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Engine/CoreEngine.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Engine/CoreEngine.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Engine/MatchingEngine.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Engine/MatchingEngine.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Storage/BinaryOrderBookStorage.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Storage/BinaryOrderBookStorage.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Storage/MultisetOrderBookStorage.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Storage/MultisetOrderBookStorage.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/UI/OrdersPanel.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/UI/OrdersPanel.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Engine/AppEngine.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Engine/CoreEngine.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Engine/CoreEngine.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Engine/MatchingEngine.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Storage/BinaryOrderBookStorage.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Storage/BinaryOrderBookStorage.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Storage/MultisetOrderBookStorage.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Storage/MultisetOrderBookStorage.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/GraphPanel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/GraphPanel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/OrderBookPanel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/OrderBookPanel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/OrderEntryPanel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/OrderEntryPanel.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/OrdersPanel.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/OrdersPanel.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2025" />
+    <option name="minorVersion" value="2.2" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="3GdTiUVAXoV6LySyLp2tuemzsI0" />
+  <component name="ProjectStatusUIService">{
+  &quot;uiKindId&quot;: &quot;Widget&quot;
+}</component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;CMake Application.LimitOrderBook.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;ctest.advertisement.all.test.configuration.is.created&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CMakeSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="CMake Application.LimitOrderBook">
+    <configuration name="FullTest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="FullTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="FullTest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LimitOrderBook" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="LimitOrderBook" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="LimitOrderBook">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="args_product_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="args_product_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="args_product_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="basic_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="basic_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="basic_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="benchmark" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="benchmark" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="benchmark_gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="benchmark_gtest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="benchmark_gtest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="benchmark_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="benchmark_main" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="benchmark_min_time_flag_iters_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="benchmark_min_time_flag_iters_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="benchmark_min_time_flag_iters_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="benchmark_min_time_flag_time_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="benchmark_min_time_flag_time_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="benchmark_min_time_flag_time_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="benchmark_name_gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="benchmark_name_gtest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="benchmark_name_gtest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="benchmark_random_interleaving_gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="benchmark_random_interleaving_gtest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="benchmark_random_interleaving_gtest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="benchmark_setup_teardown_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="benchmark_setup_teardown_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="benchmark_setup_teardown_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="benchmark_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="benchmark_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="benchmark_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="commandlineflags_gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="commandlineflags_gtest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="commandlineflags_gtest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="complexity_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="complexity_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="complexity_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cxx03_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="cxx03_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="cxx03_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="diagnostics_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="diagnostics_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="diagnostics_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="display_aggregates_only_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="display_aggregates_only_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="display_aggregates_only_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="donotoptimize_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="donotoptimize_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="donotoptimize_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="filter_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="filter_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="filter_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="fixture_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="fixture_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="fixture_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="glfw" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="glfw" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="gmock" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="gmock_main" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="gtest" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="imgui_lib" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="imgui_lib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="internal_threading_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="internal_threading_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="internal_threading_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="link_main_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="link_main_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="link_main_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="map_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="map_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="map_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="memory_manager_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="memory_manager_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="memory_manager_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="min_time_parse_gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="min_time_parse_gtest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="min_time_parse_gtest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="multiple_ranges_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="multiple_ranges_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="multiple_ranges_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="options_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="options_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="options_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="output_test_helper" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="output_test_helper" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="perf_counters_gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="perf_counters_gtest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="perf_counters_gtest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="perf_counters_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="perf_counters_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="perf_counters_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="register_benchmark_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="register_benchmark_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="register_benchmark_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="repetitions_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="repetitions_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="repetitions_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="report_aggregates_only_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="report_aggregates_only_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="report_aggregates_only_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="reporter_output_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="reporter_output_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="reporter_output_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_benchmarks" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="run_benchmarks" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="run_benchmarks">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_tests" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="run_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="run_tests">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="skip_with_error_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="skip_with_error_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="skip_with_error_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="spec_arg_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="spec_arg_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="spec_arg_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="spec_arg_verbosity_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="spec_arg_verbosity_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="spec_arg_verbosity_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="statistics_gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="statistics_gtest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="statistics_gtest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="string_util_gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="string_util_gtest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="string_util_gtest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tcp_server_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="tcp_server_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="tcp_server_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="templated_fixture_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="templated_fixture_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="templated_fixture_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="time_unit_gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="time_unit_gtest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="time_unit_gtest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="trading_lib" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="trading_lib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="trading_lib_cov" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="trading_lib_cov" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="uninstall" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="uninstall" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="update_mappings" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="update_mappings" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="user_counters_tabular_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="user_counters_tabular_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="user_counters_tabular_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="user_counters_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="user_counters_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="user_counters_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="user_counters_thousands_test" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="user_counters_thousands_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="user_counters_thousands_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All CTest" type="CTestRunConfiguration" factoryName="CTestRun" PROGRAM_PARAMS="--extra-verbose" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$CMakeCurrentLocalGenerationDir$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_PATH="$CTestCurrentExecutableName$" EXPLICIT_BUILD_TARGET_NAME="all" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.FullTest" />
+      <item itemvalue="CMake Application.imgui_lib" />
+      <item itemvalue="CMake Application.LimitOrderBook" />
+      <item itemvalue="CMake Application.run_benchmarks" />
+      <item itemvalue="CMake Application.run_tests" />
+      <item itemvalue="CMake Application.tcp_server_test" />
+      <item itemvalue="CMake Application.trading_lib" />
+      <item itemvalue="CMake Application.trading_lib_cov" />
+      <item itemvalue="CMake Application.uninstall" />
+      <item itemvalue="CMake Application.glfw" />
+      <item itemvalue="CMake Application.update_mappings" />
+      <item itemvalue="CMake Application.benchmark" />
+      <item itemvalue="CMake Application.benchmark_main" />
+      <item itemvalue="CMake Application.args_product_test" />
+      <item itemvalue="CMake Application.basic_test" />
+      <item itemvalue="CMake Application.benchmark_gtest" />
+      <item itemvalue="CMake Application.benchmark_min_time_flag_iters_test" />
+      <item itemvalue="CMake Application.benchmark_min_time_flag_time_test" />
+      <item itemvalue="CMake Application.benchmark_name_gtest" />
+      <item itemvalue="CMake Application.benchmark_random_interleaving_gtest" />
+      <item itemvalue="CMake Application.benchmark_setup_teardown_test" />
+      <item itemvalue="CMake Application.benchmark_test" />
+      <item itemvalue="CMake Application.commandlineflags_gtest" />
+      <item itemvalue="CMake Application.complexity_test" />
+      <item itemvalue="CMake Application.cxx03_test" />
+      <item itemvalue="CMake Application.diagnostics_test" />
+      <item itemvalue="CMake Application.display_aggregates_only_test" />
+      <item itemvalue="CMake Application.donotoptimize_test" />
+      <item itemvalue="CMake Application.filter_test" />
+      <item itemvalue="CMake Application.fixture_test" />
+      <item itemvalue="CMake Application.internal_threading_test" />
+      <item itemvalue="CMake Application.link_main_test" />
+      <item itemvalue="CMake Application.map_test" />
+      <item itemvalue="CMake Application.memory_manager_test" />
+      <item itemvalue="CMake Application.min_time_parse_gtest" />
+      <item itemvalue="CMake Application.multiple_ranges_test" />
+      <item itemvalue="CMake Application.options_test" />
+      <item itemvalue="CMake Application.output_test_helper" />
+      <item itemvalue="CMake Application.perf_counters_gtest" />
+      <item itemvalue="CMake Application.perf_counters_test" />
+      <item itemvalue="CMake Application.register_benchmark_test" />
+      <item itemvalue="CMake Application.repetitions_test" />
+      <item itemvalue="CMake Application.report_aggregates_only_test" />
+      <item itemvalue="CMake Application.reporter_output_test" />
+      <item itemvalue="CMake Application.skip_with_error_test" />
+      <item itemvalue="CMake Application.spec_arg_test" />
+      <item itemvalue="CMake Application.spec_arg_verbosity_test" />
+      <item itemvalue="CMake Application.statistics_gtest" />
+      <item itemvalue="CMake Application.string_util_gtest" />
+      <item itemvalue="CMake Application.templated_fixture_test" />
+      <item itemvalue="CMake Application.time_unit_gtest" />
+      <item itemvalue="CMake Application.user_counters_tabular_test" />
+      <item itemvalue="CMake Application.user_counters_test" />
+      <item itemvalue="CMake Application.user_counters_thousands_test" />
+      <item itemvalue="CMake Application.gmock" />
+      <item itemvalue="CMake Application.gmock_main" />
+      <item itemvalue="CMake Application.gtest" />
+      <item itemvalue="CMake Application.gtest_main" />
+      <item itemvalue="CTest Application.All CTest" />
+    </list>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3d535dd-94c8-4bea-83c1-1ab4a636eead" name="Changes" comment="" />
+      <created>1784300575024</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1784300575024</updated>
+      <workItem from="1784300576328" duration="9532000" />
+      <workItem from="1784381856180" duration="43354000" />
+      <workItem from="1784658027547" duration="485000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/Networking/TestServer.cpp</url>
+          <line>3</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

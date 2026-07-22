@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/dennis/Desktop/Portofolio/LimitOrderBook/build-tsan/_deps/implot-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

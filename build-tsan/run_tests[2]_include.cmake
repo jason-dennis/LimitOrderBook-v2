@@ -1,0 +1,5 @@
+if(EXISTS "/Users/dennis/Desktop/Portofolio/LimitOrderBook/build-tsan/run_tests[2]_tests.cmake")
+  include("/Users/dennis/Desktop/Portofolio/LimitOrderBook/build-tsan/run_tests[2]_tests.cmake")
+else()
+  add_test(run_tests_NOT_BUILT run_tests_NOT_BUILT)
+endif()

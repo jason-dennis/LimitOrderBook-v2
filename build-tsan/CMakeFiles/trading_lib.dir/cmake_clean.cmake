@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/trading_lib.dir/src/Concurrency/ClientSimulator.cpp.o"
+  "CMakeFiles/trading_lib.dir/src/Concurrency/ClientSimulator.cpp.o.d"
+  "CMakeFiles/trading_lib.dir/src/Concurrency/OrderQueue.cpp.o"
+  "CMakeFiles/trading_lib.dir/src/Concurrency/OrderQueue.cpp.o.d"
+  "CMakeFiles/trading_lib.dir/src/Concurrency/SymbolWorker.cpp.o"
+  "CMakeFiles/trading_lib.dir/src/Concurrency/SymbolWorker.cpp.o.d"
+  "CMakeFiles/trading_lib.dir/src/Concurrency/Worker.cpp.o"
+  "CMakeFiles/trading_lib.dir/src/Concurrency/Worker.cpp.o.d"
+  "CMakeFiles/trading_lib.dir/src/Domain/order.cpp.o"
+  "CMakeFiles/trading_lib.dir/src/Domain/order.cpp.o.d"
+  "CMakeFiles/trading_lib.dir/src/Engine/CoreEngine.cpp.o"
+  "CMakeFiles/trading_lib.dir/src/Engine/CoreEngine.cpp.o.d"
+  "CMakeFiles/trading_lib.dir/src/Memory/OrderPool.cpp.o"
+  "CMakeFiles/trading_lib.dir/src/Memory/OrderPool.cpp.o.d"
+  "CMakeFiles/trading_lib.dir/src/Networking/Protocol.cpp.o"
+  "CMakeFiles/trading_lib.dir/src/Networking/Protocol.cpp.o.d"
+  "CMakeFiles/trading_lib.dir/src/Networking/TcpServer.cpp.o"
+  "CMakeFiles/trading_lib.dir/src/Networking/TcpServer.cpp.o.d"
+  "CMakeFiles/trading_lib.dir/src/Routing/OrderRouter.cpp.o"
+  "CMakeFiles/trading_lib.dir/src/Routing/OrderRouter.cpp.o.d"
+  "CMakeFiles/trading_lib.dir/src/Storage/BinaryOrderBookStorage.cpp.o"
+  "CMakeFiles/trading_lib.dir/src/Storage/BinaryOrderBookStorage.cpp.o.d"
+  "CMakeFiles/trading_lib.dir/src/Storage/MultisetOrderBookStorage.cpp.o"
+  "CMakeFiles/trading_lib.dir/src/Storage/MultisetOrderBookStorage.cpp.o.d"
+  "CMakeFiles/trading_lib.dir/src/UI/GraphPanel.cpp.o"
+  "CMakeFiles/trading_lib.dir/src/UI/GraphPanel.cpp.o.d"
+  "CMakeFiles/trading_lib.dir/src/UI/OrderBookPanel.cpp.o"
+  "CMakeFiles/trading_lib.dir/src/UI/OrderBookPanel.cpp.o.d"
+  "CMakeFiles/trading_lib.dir/src/UI/OrderEntryPanel.cpp.o"
+  "CMakeFiles/trading_lib.dir/src/UI/OrderEntryPanel.cpp.o.d"
+  "CMakeFiles/trading_lib.dir/src/UI/OrdersPanel.cpp.o"
+  "CMakeFiles/trading_lib.dir/src/UI/OrdersPanel.cpp.o.d"
+  "CMakeFiles/trading_lib.dir/src/UI/TradeTerminal.cpp.o"
+  "CMakeFiles/trading_lib.dir/src/UI/TradeTerminal.cpp.o.d"
+  "libtrading_lib.a"
+  "libtrading_lib.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/trading_lib.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

@@ -1,0 +1,15 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/dennis/Desktop/Portofolio/LimitOrderBook/build-tsan/cmake_install.cmake",
+		"/Users/dennis/Desktop/Portofolio/LimitOrderBook/build-tsan/_deps/glfw-build/cmake_install.cmake",
+		"/Users/dennis/Desktop/Portofolio/LimitOrderBook/build-tsan/_deps/glfw-build/src/cmake_install.cmake",
+		"/Users/dennis/Desktop/Portofolio/LimitOrderBook/build-tsan/_deps/googletest-build/cmake_install.cmake",
+		"/Users/dennis/Desktop/Portofolio/LimitOrderBook/build-tsan/_deps/googletest-build/googlemock/cmake_install.cmake",
+		"/Users/dennis/Desktop/Portofolio/LimitOrderBook/build-tsan/_deps/googletest-build/googletest/cmake_install.cmake",
+		"/Users/dennis/Desktop/Portofolio/LimitOrderBook/build-tsan/_deps/googlebenchmark-build/cmake_install.cmake",
+		"/Users/dennis/Desktop/Portofolio/LimitOrderBook/build-tsan/_deps/googlebenchmark-build/src/cmake_install.cmake",
+		"/Users/dennis/Desktop/Portofolio/LimitOrderBook/build-tsan/_deps/googlebenchmark-build/test/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

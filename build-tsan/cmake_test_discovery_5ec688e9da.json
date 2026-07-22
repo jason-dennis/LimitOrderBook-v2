@@ -1,0 +1,1869 @@
+{
+  "tests": 357,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "MultisetOrderBookTest",
+      "tests": 89,
+      "testsuite": [
+        {
+          "name": "AddBuyOrder_BookNotEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 61
+        },
+        {
+          "name": "AddSellOrder_BookNotEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 67
+        },
+        {
+          "name": "AddMultipleBuyOrders_BestBidIsHighestPrice",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 73
+        },
+        {
+          "name": "AddMultipleSellOrders_BestAskIsLowestPrice",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 83
+        },
+        {
+          "name": "AddOrdersAtSamePrice_BothStored",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 93
+        },
+        {
+          "name": "GetBestBid_EmptyBook_ReturnsZero",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 109
+        },
+        {
+          "name": "GetBestAsk_EmptyBook_ReturnsZero",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 113
+        },
+        {
+          "name": "IsBidEmpty_InitiallyTrue",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 121
+        },
+        {
+          "name": "IsAskEmpty_InitiallyTrue",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 125
+        },
+        {
+          "name": "IsBidEmpty_FalseAfterAdd",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 129
+        },
+        {
+          "name": "IsAskEmpty_FalseAfterAdd",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 134
+        },
+        {
+          "name": "CancelBuyOrder_RemovesFromBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 143
+        },
+        {
+          "name": "CancelSellOrder_RemovesFromBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 149
+        },
+        {
+          "name": "CancelOrder_SetsStatusCanceled",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 155
+        },
+        {
+          "name": "CancelOrder_NonExistentId_DoesNotCrash",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 161
+        },
+        {
+          "name": "CancelOrder_OnlyRemovesTarGet",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 167
+        },
+        {
+          "name": "CancelOrder_EmptyBook_DoesNotCrash",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 177
+        },
+        {
+          "name": "UpdateQuantity_BuyOrder_PartialFill",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 187
+        },
+        {
+          "name": "UpdateQuantity_BuyOrder_FullFill_RemovesOrder",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 196
+        },
+        {
+          "name": "UpdateQuantity_SellOrder_PartialFill",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 202
+        },
+        {
+          "name": "UpdateQuantity_SellOrder_FullFill_RemovesOrder",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 211
+        },
+        {
+          "name": "UpdateQuantity_NonExistentId_DoesNotCrash",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 217
+        },
+        {
+          "name": "UpdateQuantity_SetsFilledStatus_WhenZero",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 223
+        },
+        {
+          "name": "PopBestBid_RemovesTopBid",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 233
+        },
+        {
+          "name": "PopBestBid_EmptyBook_DoesNotCrash",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 243
+        },
+        {
+          "name": "PopBestBid_SingleOrder_BookBecomesEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 248
+        },
+        {
+          "name": "PopBestBid_SetsFilledStatus",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 254
+        },
+        {
+          "name": "PopBestAsk_RemovesTopAsk",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 264
+        },
+        {
+          "name": "PopBestAsk_EmptyBook_DoesNotCrash",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 274
+        },
+        {
+          "name": "PopBestAsk_SingleOrder_BookBecomesEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 279
+        },
+        {
+          "name": "Integration_AddPartialFillThenCancel",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 289
+        },
+        {
+          "name": "Integration_PopUntilEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 297
+        },
+        {
+          "name": "Integration_BidAndAskSide_Independent",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 307
+        },
+        {
+          "name": "UpdateQuantity_NegativeValue_BuyOrder_TreatedAsFilled",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 319
+        },
+        {
+          "name": "UpdateQuantity_NegativeValue_SellOrder_TreatedAsFilled",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 325
+        },
+        {
+          "name": "CancelOrder_BidNotFound_AskFound",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 335
+        },
+        {
+          "name": "CancelOrder_BidFound_AskNotSearched",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 341
+        },
+        {
+          "name": "CancelOrder_NeitherFound_BothMiss",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 347
+        },
+        {
+          "name": "UpdateQuantity_BidNotFound_AskFound_Partial",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 359
+        },
+        {
+          "name": "UpdateQuantity_BidNotFound_AskFound_Full",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 365
+        },
+        {
+          "name": "UpdateQuantity_NeitherFound_BothMiss",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 371
+        },
+        {
+          "name": "Bitmap_AddRemoveAtSamePrice_BitmapConsistent",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 381
+        },
+        {
+          "name": "Bitmap_MultiplePriceLevels_AfterPop_NextLevelVisible",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 391
+        },
+        {
+          "name": "Bitmap_AskMultiplePriceLevels_AfterPop_NextLevelVisible",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 403
+        },
+        {
+          "name": "GetBestBids_EmptyBook_ReturnsEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 419
+        },
+        {
+          "name": "GetBestBids_XZero_ReturnsEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 423
+        },
+        {
+          "name": "GetBestBids_XLargerThanBook_ReturnsAll",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 428
+        },
+        {
+          "name": "GetBestBids_ExactX_ReturnsX",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 435
+        },
+        {
+          "name": "GetBestBids_SortedDescending_HighestPriceFirst",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 443
+        },
+        {
+          "name": "GetBestBids_SamePriceFIFO_OlderOrderFirst",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 454
+        },
+        {
+          "name": "GetBestBids_DoesNotModifyBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 463
+        },
+        {
+          "name": "GetBestBids_OnlyBidsSide_AskUnaffected",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 471
+        },
+        {
+          "name": "GetBestBids_AfterCancel_ReturnsUpdatedBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 479
+        },
+        {
+          "name": "GetBestBids_Top3_CorrectQuantities",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 488
+        },
+        {
+          "name": "GetBestBids_MultipleOrdersSamePrice_AllReturned",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 500
+        },
+        {
+          "name": "GetBestBids_MultipleOrdersSamePrice_CappedAtX",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 508
+        },
+        {
+          "name": "GetBestAsks_EmptyBook_ReturnsEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 520
+        },
+        {
+          "name": "GetBestAsks_XZero_ReturnsEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 524
+        },
+        {
+          "name": "GetBestAsks_XLargerThanBook_ReturnsAll",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 529
+        },
+        {
+          "name": "GetBestAsks_ExactX_ReturnsX",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 536
+        },
+        {
+          "name": "GetBestAsks_SortedAscending_LowestPriceFirst",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 544
+        },
+        {
+          "name": "GetBestAsks_SamePriceFIFO_OlderOrderFirst",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 555
+        },
+        {
+          "name": "GetBestAsks_DoesNotModifyBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 564
+        },
+        {
+          "name": "GetBestAsks_OnlyAsksSide_BidUnaffected",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 572
+        },
+        {
+          "name": "GetBestAsks_AfterCancel_ReturnsUpdatedBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 580
+        },
+        {
+          "name": "GetBestAsks_Top3_CorrectQuantities",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 589
+        },
+        {
+          "name": "GetBestAsks_MultipleOrdersSamePrice_AllReturned",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 601
+        },
+        {
+          "name": "GetBestAsks_MultipleOrdersSamePrice_CappedAtX",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 609
+        },
+        {
+          "name": "CanFillQuantityBids_EmptyBook_ReturnsFalse",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 621
+        },
+        {
+          "name": "CanFillQuantityBids_SingleOrder_ExactFill",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 625
+        },
+        {
+          "name": "CanFillQuantityBids_SingleOrder_PartialAvailable",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 630
+        },
+        {
+          "name": "CanFillQuantityBids_MultipleOrders_CombinedFill",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 635
+        },
+        {
+          "name": "CanFillQuantityBids_PriceTooLow_ReturnsFalse",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 641
+        },
+        {
+          "name": "CanFillQuantityBids_MixedPrices_OnlyUsesEligible",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 646
+        },
+        {
+          "name": "CanFillQuantityBids_MultipleOrdersSamePrice_Combined",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 652
+        },
+        {
+          "name": "CanFillQuantityBids_QuantityHitsZeroMidLoop",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 658
+        },
+        {
+          "name": "CanFillQuantityBids_LoopExhausted_NeverHitsTarget",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 664
+        },
+        {
+          "name": "CanFillQuantityBids_AfterPartialUpdate_CorrectQty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 670
+        },
+        {
+          "name": "CanFillQuantityAsks_EmptyBook_ReturnsFalse",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 681
+        },
+        {
+          "name": "CanFillQuantityAsks_SingleOrder_ExactFill",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 685
+        },
+        {
+          "name": "CanFillQuantityAsks_SingleOrder_PartialAvailable",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 690
+        },
+        {
+          "name": "CanFillQuantityAsks_MultipleOrders_CombinedFill",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 695
+        },
+        {
+          "name": "CanFillQuantityAsks_PriceTooHigh_ReturnsFalse",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 701
+        },
+        {
+          "name": "CanFillQuantityAsks_MixedPrices_OnlyUsesEligible",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 706
+        },
+        {
+          "name": "CanFillQuantityAsks_MultipleOrdersSamePrice_Combined",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 712
+        },
+        {
+          "name": "CanFillQuantityAsks_QuantityHitsZeroMidLoop",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 718
+        },
+        {
+          "name": "CanFillQuantityAsks_LoopExhausted_NeverHitsTarget",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 724
+        },
+        {
+          "name": "CanFillQuantityAsks_AfterPartialUpdate_CorrectQty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 730
+        },
+        {
+          "name": "GetBestBidsAndAsks_IndependentOfEachOther",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_multiset_storage.cpp",
+          "line": 741
+        }
+      ]
+    },
+    {
+      "name": "OrderTest",
+      "tests": 55,
+      "testsuite": [
+        {
+          "name": "Constructor_StoresOrderID",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 20
+        },
+        {
+          "name": "Constructor_StoresTraderID",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 25
+        },
+        {
+          "name": "Constructor_StoresSide_Buy",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 30
+        },
+        {
+          "name": "Constructor_StoresSide_Sell",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 35
+        },
+        {
+          "name": "Constructor_StoresType_Limit",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 41
+        },
+        {
+          "name": "Constructor_StoresType_Market",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 46
+        },
+        {
+          "name": "Constructor_StoresType_Stop",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 52
+        },
+        {
+          "name": "Constructor_StoresType_StopLimit",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 58
+        },
+        {
+          "name": "Constructor_StoresSymbol",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 64
+        },
+        {
+          "name": "Constructor_StoresPrice",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 69
+        },
+        {
+          "name": "Constructor_StoresPriceLargeValue",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 74
+        },
+        {
+          "name": "Constructor_ThrowsOnPriceZero",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 81
+        },
+        {
+          "name": "Constructor_StoresQuantity",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 89
+        },
+        {
+          "name": "Constructor_StoresTimestamp",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 94
+        },
+        {
+          "name": "Constructor_StoresTIF_GTC",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 99
+        },
+        {
+          "name": "Constructor_StoresTIF_IOC",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 104
+        },
+        {
+          "name": "Constructor_StoresTIF_FOK",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 110
+        },
+        {
+          "name": "Constructor_StoresStatus_New",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 116
+        },
+        {
+          "name": "Constructor_StoresStatus_Rejected",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 121
+        },
+        {
+          "name": "SetQuantity_UpdatesQuantity",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 131
+        },
+        {
+          "name": "SetQuantity_ToZero",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 137
+        },
+        {
+          "name": "SetQuantity_MultipleUpdates",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 143
+        },
+        {
+          "name": "SetStatus_ToPartiallyFilled",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 151
+        },
+        {
+          "name": "SetStatus_ToFilled",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 157
+        },
+        {
+          "name": "SetStatus_ToCanceled",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 163
+        },
+        {
+          "name": "SetStatus_ToRejected",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 169
+        },
+        {
+          "name": "SetStatus_Transition_NewToFilledToCanceled",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 175
+        },
+        {
+          "name": "SetQuantity_WorksOnConstRef",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 184
+        },
+        {
+          "name": "SetStatus_WorksOnConstRef",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 191
+        },
+        {
+          "name": "ToString_OrderStatus_New",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 202
+        },
+        {
+          "name": "ToString_OrderStatus_PartiallyFilled",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 206
+        },
+        {
+          "name": "ToString_OrderStatus_Filled",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 210
+        },
+        {
+          "name": "ToString_OrderStatus_Canceled",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 214
+        },
+        {
+          "name": "ToString_OrderStatus_Rejected",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 218
+        },
+        {
+          "name": "ToString_OrderSide_Buy",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 222
+        },
+        {
+          "name": "ToString_OrderSide_Sell",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 226
+        },
+        {
+          "name": "ToString_OrderType_Market",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 230
+        },
+        {
+          "name": "ToString_OrderType_Limit",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 234
+        },
+        {
+          "name": "ToString_OrderType_Stop",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 238
+        },
+        {
+          "name": "ToString_TimeInForce_GTC",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 242
+        },
+        {
+          "name": "ToString_TimeInForce_IOC",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 246
+        },
+        {
+          "name": "ToString_TimeInForce_FOK",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 250
+        },
+        {
+          "name": "StreamOperator_NotEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 258
+        },
+        {
+          "name": "StreamOperator_ContainsSymbol",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 265
+        },
+        {
+          "name": "StreamOperator_ContainsPrice",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 272
+        },
+        {
+          "name": "StreamOperator_ContainsQuantity",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 279
+        },
+        {
+          "name": "OrderID_ImmutableAfterSetQuantity",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 290
+        },
+        {
+          "name": "TraderID_ImmutableAfterSetStatus",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 296
+        },
+        {
+          "name": "Symbol_ImmutableAfterMutation",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 302
+        },
+        {
+          "name": "Price_ImmutableAfterMutation",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 309
+        },
+        {
+          "name": "TwoOrders_DifferentIDs_AreDistinct",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 315
+        },
+        {
+          "name": "SetQuantity_SimulatesPartialFill",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 321
+        },
+        {
+          "name": "Constructor_ThrowsOnNegativeQuantity",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 332
+        },
+        {
+          "name": "Constructor_ThrowsOnEmptySymbol",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 340
+        },
+        {
+          "name": "ToString_OrderType_StopLimit",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Domain\/test_order.cpp",
+          "line": 348
+        }
+      ]
+    },
+    {
+      "name": "MatchingEngineTest",
+      "tests": 36,
+      "testsuite": [
+        {
+          "name": "BuyLimit_GTC_NoMatch_AddsToBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 82
+        },
+        {
+          "name": "BuyLimit_GTC_FullMatch_NoRemainder",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 90
+        },
+        {
+          "name": "BuyLimit_GTC_PartialMatch_RemainderAddedToBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 104
+        },
+        {
+          "name": "BuyLimit_GTC_PriceTooLow_NoMatch_AddsToBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 118
+        },
+        {
+          "name": "BuyLimit_GTC_MultipleAsks_MatchesMultiple",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 131
+        },
+        {
+          "name": "BuyLimit_IOC_PartialMatch_RemainderDiscarded",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 149
+        },
+        {
+          "name": "BuyLimit_IOC_NoMatch_NothingAdded",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 162
+        },
+        {
+          "name": "BuyLimit_FOK_CanFill_ExecutesFully",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 174
+        },
+        {
+          "name": "BuyLimit_FOK_CannotFill_NoTrades",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 186
+        },
+        {
+          "name": "BuyMarket_GTC_FullMatch",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 202
+        },
+        {
+          "name": "BuyMarket_GTC_NoAsks_NoTrades",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 215
+        },
+        {
+          "name": "BuyMarket_FOK_CanFill_Executes",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 222
+        },
+        {
+          "name": "BuyMarket_FOK_CannotFill_NoTrades",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 233
+        },
+        {
+          "name": "SellLimit_GTC_NoMatch_AddsToBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 248
+        },
+        {
+          "name": "SellLimit_GTC_FullMatch_NoRemainder",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 256
+        },
+        {
+          "name": "SellLimit_GTC_PartialMatch_RemainderAddedToBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 270
+        },
+        {
+          "name": "SellLimit_GTC_PriceTooHigh_NoMatch_AddsToBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 284
+        },
+        {
+          "name": "SellLimit_GTC_MultipleBids_MatchesMultiple",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 297
+        },
+        {
+          "name": "SellLimit_IOC_PartialMatch_RemainderDiscarded",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 315
+        },
+        {
+          "name": "SellLimit_IOC_NoMatch_NothingAdded",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 327
+        },
+        {
+          "name": "SellLimit_FOK_CanFill_ExecutesFully",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 339
+        },
+        {
+          "name": "SellLimit_FOK_CannotFill_NoTrades",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 351
+        },
+        {
+          "name": "SellMarket_GTC_FullMatch",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 367
+        },
+        {
+          "name": "SellMarket_GTC_NoBids_NoTrades",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 380
+        },
+        {
+          "name": "Trade_HasCorrectPrice",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 391
+        },
+        {
+          "name": "Trade_HasCorrectMakerAndTakerID",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 403
+        },
+        {
+          "name": "GetOrderBook_ReturnsCorrectState",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 420
+        },
+        {
+          "name": "Integration_BuyAndSell_CrossingPrices_Match",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 433
+        },
+        {
+          "name": "Integration_MultipleOrders_CorrectMatchOrder",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 446
+        },
+        {
+          "name": "SellLimit_GTC_PartialMatch_BidQuantityUpdatedCorrectly",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 464
+        },
+        {
+          "name": "BuyLimit_GTC_PartialMatch_AskQuantityUpdatedCorrectly",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 478
+        },
+        {
+          "name": "BuyLimit_GTC_MultipleAsks_PopAndUpdateInSameOrder",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 492
+        },
+        {
+          "name": "MarketOrders_NeverLeakPoolSlots",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 516
+        },
+        {
+          "name": "FOK_SuccessfulFill_NeverLeaksPoolSlots",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 537
+        },
+        {
+          "name": "IOC_UnmatchedRemainder_NeverLeaksPoolSlots",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 561
+        },
+        {
+          "name": "FullyMatchedLimitGTC_NeverLeaksPoolSlots",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestMatchingEngine.cpp",
+          "line": 581
+        }
+      ]
+    },
+    {
+      "name": "BinaryOrderBookTest",
+      "tests": 89,
+      "testsuite": [
+        {
+          "name": "AddBuyOrder_BookNotEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 62
+        },
+        {
+          "name": "AddSellOrder_BookNotEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 68
+        },
+        {
+          "name": "AddMultipleBuyOrders_BestBidIsHighestPrice",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 74
+        },
+        {
+          "name": "AddMultipleSellOrders_BestAskIsLowestPrice",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 84
+        },
+        {
+          "name": "AddOrdersAtSamePrice_BothStored",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 94
+        },
+        {
+          "name": "GetBestBid_EmptyBook_ReturnsZero",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 110
+        },
+        {
+          "name": "GetBestAsk_EmptyBook_ReturnsZero",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 114
+        },
+        {
+          "name": "IsBidEmpty_InitiallyTrue",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 122
+        },
+        {
+          "name": "IsAskEmpty_InitiallyTrue",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 126
+        },
+        {
+          "name": "IsBidEmpty_FalseAfterAdd",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 130
+        },
+        {
+          "name": "IsAskEmpty_FalseAfterAdd",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 135
+        },
+        {
+          "name": "CancelBuyOrder_RemovesFromBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 144
+        },
+        {
+          "name": "CancelSellOrder_RemovesFromBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 150
+        },
+        {
+          "name": "CancelOrder_SetsStatusCanceled",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 156
+        },
+        {
+          "name": "CancelOrder_NonExistentId_DoesNotCrash",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 162
+        },
+        {
+          "name": "CancelOrder_OnlyRemovesTarGet",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 168
+        },
+        {
+          "name": "CancelOrder_EmptyBook_DoesNotCrash",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 178
+        },
+        {
+          "name": "UpdateQuantity_BuyOrder_PartialFill",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 188
+        },
+        {
+          "name": "UpdateQuantity_BuyOrder_FullFill_RemovesOrder",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 197
+        },
+        {
+          "name": "UpdateQuantity_SellOrder_PartialFill",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 203
+        },
+        {
+          "name": "UpdateQuantity_SellOrder_FullFill_RemovesOrder",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 212
+        },
+        {
+          "name": "UpdateQuantity_NonExistentId_DoesNotCrash",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 218
+        },
+        {
+          "name": "UpdateQuantity_SetsFilledStatus_WhenZero",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 224
+        },
+        {
+          "name": "PopBestBid_RemovesTopBid",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 234
+        },
+        {
+          "name": "PopBestBid_EmptyBook_DoesNotCrash",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 244
+        },
+        {
+          "name": "PopBestBid_SingleOrder_BookBecomesEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 249
+        },
+        {
+          "name": "PopBestBid_SetsFilledStatus",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 255
+        },
+        {
+          "name": "PopBestAsk_RemovesTopAsk",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 265
+        },
+        {
+          "name": "PopBestAsk_EmptyBook_DoesNotCrash",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 275
+        },
+        {
+          "name": "PopBestAsk_SingleOrder_BookBecomesEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 280
+        },
+        {
+          "name": "Integration_AddPartialFillThenCancel",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 290
+        },
+        {
+          "name": "Integration_PopUntilEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 298
+        },
+        {
+          "name": "Integration_BidAndAskSide_Independent",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 308
+        },
+        {
+          "name": "UpdateQuantity_NegativeValue_BuyOrder_TreatedAsFilled",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 320
+        },
+        {
+          "name": "UpdateQuantity_NegativeValue_SellOrder_TreatedAsFilled",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 326
+        },
+        {
+          "name": "CancelOrder_BidNotFound_AskFound",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 336
+        },
+        {
+          "name": "CancelOrder_BidFound_AskNotSearched",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 342
+        },
+        {
+          "name": "CancelOrder_NeitherFound_BothMiss",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 348
+        },
+        {
+          "name": "UpdateQuantity_BidNotFound_AskFound_Partial",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 360
+        },
+        {
+          "name": "UpdateQuantity_BidNotFound_AskFound_Full",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 366
+        },
+        {
+          "name": "UpdateQuantity_NeitherFound_BothMiss",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 372
+        },
+        {
+          "name": "Bitmap_AddRemoveAtSamePrice_BitmapConsistent",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 382
+        },
+        {
+          "name": "Bitmap_MultiplePriceLevels_AfterPop_NextLevelVisible",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 392
+        },
+        {
+          "name": "Bitmap_AskMultiplePriceLevels_AfterPop_NextLevelVisible",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 404
+        },
+        {
+          "name": "GetBestBids_EmptyBook_ReturnsEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 420
+        },
+        {
+          "name": "GetBestBids_XZero_ReturnsEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 424
+        },
+        {
+          "name": "GetBestBids_XLargerThanBook_ReturnsAll",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 429
+        },
+        {
+          "name": "GetBestBids_ExactX_ReturnsX",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 436
+        },
+        {
+          "name": "GetBestBids_SortedDescending_HighestPriceFirst",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 444
+        },
+        {
+          "name": "GetBestBids_SamePriceFIFO_OlderOrderFirst",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 455
+        },
+        {
+          "name": "GetBestBids_DoesNotModifyBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 464
+        },
+        {
+          "name": "GetBestBids_OnlyBidsSide_AskUnaffected",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 472
+        },
+        {
+          "name": "GetBestBids_AfterCancel_ReturnsUpdatedBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 480
+        },
+        {
+          "name": "GetBestBids_Top3_CorrectQuantities",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 489
+        },
+        {
+          "name": "GetBestBids_MultipleOrdersSamePrice_AllReturned",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 501
+        },
+        {
+          "name": "GetBestBids_MultipleOrdersSamePrice_CappedAtX",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 509
+        },
+        {
+          "name": "GetBestAsks_EmptyBook_ReturnsEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 521
+        },
+        {
+          "name": "GetBestAsks_XZero_ReturnsEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 525
+        },
+        {
+          "name": "GetBestAsks_XLargerThanBook_ReturnsAll",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 530
+        },
+        {
+          "name": "GetBestAsks_ExactX_ReturnsX",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 537
+        },
+        {
+          "name": "GetBestAsks_SortedAscending_LowestPriceFirst",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 545
+        },
+        {
+          "name": "GetBestAsks_SamePriceFIFO_OlderOrderFirst",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 556
+        },
+        {
+          "name": "GetBestAsks_DoesNotModifyBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 565
+        },
+        {
+          "name": "GetBestAsks_OnlyAsksSide_BidUnaffected",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 573
+        },
+        {
+          "name": "GetBestAsks_AfterCancel_ReturnsUpdatedBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 581
+        },
+        {
+          "name": "GetBestAsks_Top3_CorrectQuantities",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 590
+        },
+        {
+          "name": "GetBestAsks_MultipleOrdersSamePrice_AllReturned",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 602
+        },
+        {
+          "name": "GetBestAsks_MultipleOrdersSamePrice_CappedAtX",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 610
+        },
+        {
+          "name": "CanFillQuantityBids_EmptyBook_ReturnsFalse",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 622
+        },
+        {
+          "name": "CanFillQuantityBids_SingleOrder_ExactFill",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 626
+        },
+        {
+          "name": "CanFillQuantityBids_SingleOrder_PartialAvailable",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 631
+        },
+        {
+          "name": "CanFillQuantityBids_MultipleOrders_CombinedFill",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 636
+        },
+        {
+          "name": "CanFillQuantityBids_PriceTooLow_ReturnsFalse",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 642
+        },
+        {
+          "name": "CanFillQuantityBids_MixedPrices_OnlyUsesEligible",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 647
+        },
+        {
+          "name": "CanFillQuantityBids_MultipleOrdersSamePrice_Combined",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 653
+        },
+        {
+          "name": "CanFillQuantityBids_QuantityHitsZeroMidLoop",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 659
+        },
+        {
+          "name": "CanFillQuantityBids_LoopExhausted_NeverHitsTarget",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 665
+        },
+        {
+          "name": "CanFillQuantityBids_AfterPartialUpdate_CorrectQty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 671
+        },
+        {
+          "name": "CanFillQuantityAsks_EmptyBook_ReturnsFalse",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 682
+        },
+        {
+          "name": "CanFillQuantityAsks_SingleOrder_ExactFill",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 686
+        },
+        {
+          "name": "CanFillQuantityAsks_SingleOrder_PartialAvailable",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 691
+        },
+        {
+          "name": "CanFillQuantityAsks_MultipleOrders_CombinedFill",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 696
+        },
+        {
+          "name": "CanFillQuantityAsks_PriceTooHigh_ReturnsFalse",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 702
+        },
+        {
+          "name": "CanFillQuantityAsks_MixedPrices_OnlyUsesEligible",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 707
+        },
+        {
+          "name": "CanFillQuantityAsks_MultipleOrdersSamePrice_Combined",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 713
+        },
+        {
+          "name": "CanFillQuantityAsks_QuantityHitsZeroMidLoop",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 719
+        },
+        {
+          "name": "CanFillQuantityAsks_LoopExhausted_NeverHitsTarget",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 725
+        },
+        {
+          "name": "CanFillQuantityAsks_AfterPartialUpdate_CorrectQty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 731
+        },
+        {
+          "name": "GetBestBidsAndAsks_IndependentOfEachOther",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Storage\/test_binaryorderbook.cpp",
+          "line": 742
+        }
+      ]
+    },
+    {
+      "name": "CoreEngineTest",
+      "tests": 29,
+      "testsuite": [
+        {
+          "name": "CreateOrder_EventuallyAppearsInGetOrders",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 47
+        },
+        {
+          "name": "GetOrders_OnUnknownSymbol_ReturnsEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 66
+        },
+        {
+          "name": "CreateOrder_PriceIsScaledCorrectly",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 72
+        },
+        {
+          "name": "CreateOrder_CrossingOrders_FullyMatchAndVanishFromBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 90
+        },
+        {
+          "name": "CreateOrder_PartialMatch_RemainderStaysInBookWithReducedQuantity",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 111
+        },
+        {
+          "name": "IOC_PartialMatch_RemainderDiscardedNotAddedToBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 136
+        },
+        {
+          "name": "FOK_CannotFillCompletely_NoTradeRestingOrderUnaffected",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 155
+        },
+        {
+          "name": "FOK_CanFillCompletely_ExecutesFully",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 172
+        },
+        {
+          "name": "MarketOrder_MatchesAgainstBestAvailablePrice",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 187
+        },
+        {
+          "name": "MarketOrder_NoLiquidity_NoTradeNoLeak",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 203
+        },
+        {
+          "name": "Trade_ExecutesAtMakerPrice_NotTakerPrice",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 219
+        },
+        {
+          "name": "CancelOrder_RemovesOrderFromBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 240
+        },
+        {
+          "name": "CancelOrder_NonExistentId_DoesNotCrash",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 254
+        },
+        {
+          "name": "CancelOrder_UnknownSymbol_DoesNotCrash",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 266
+        },
+        {
+          "name": "CancelOrder_OnlyRemovesTargetOrder_OthersUnaffected",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 272
+        },
+        {
+          "name": "GetBestBids_ReturnsHighestPriceFirst",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 293
+        },
+        {
+          "name": "GetBestBids_RespectsLimitSmallerThanAvailable",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 310
+        },
+        {
+          "name": "GetBestAsks_ReturnsLowestPriceFirst",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 324
+        },
+        {
+          "name": "GetTradesHistory_ReturnsCorrectTradeDetails",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 345
+        },
+        {
+          "name": "GetTradesHistory_MultipleMatches_RecordedInOrder",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 370
+        },
+        {
+          "name": "GetTradesHistory_OnUnknownSymbol_ReturnsEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 389
+        },
+        {
+          "name": "OrdersOnDifferentSymbolsAreFullyIsolated",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 399
+        },
+        {
+          "name": "ConcurrentCreateOrderFromMultipleThreads_NoLossNoDuplication",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 422
+        },
+        {
+          "name": "SaveThenLoad_RestoresRestingOrdersWithoutOriginalId",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 456
+        },
+        {
+          "name": "SaveThenLoad_MixedSidesAndMultipleSymbols",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 487
+        },
+        {
+          "name": "SaveThenLoad_PreservesApproximateTimestamp",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 521
+        },
+        {
+          "name": "SaveThenLoad_SkipsFullyFilledOrders",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 545
+        },
+        {
+          "name": "SaveWithNoOrders_ProducesValidEmptyFile",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 566
+        },
+        {
+          "name": "ConcurrentCreateAndCancel_NoPoolCorruption",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Engine\/TestCoreEngine.cpp",
+          "line": 580
+        }
+      ]
+    },
+    {
+      "name": "OrderQueueTest",
+      "tests": 10,
+      "testsuite": [
+        {
+          "name": "PushThenPopReturnsSameOrder",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Concurrency\/TestConcurrency.cpp",
+          "line": 37
+        },
+        {
+          "name": "PreservesFIFOOrder",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Concurrency\/TestConcurrency.cpp",
+          "line": 50
+        },
+        {
+          "name": "PopBlocksWhenQueueIsEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Concurrency\/TestConcurrency.cpp",
+          "line": 68
+        },
+        {
+          "name": "ShutdownUnblocksWaitingPop",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Concurrency\/TestConcurrency.cpp",
+          "line": 90
+        },
+        {
+          "name": "PopReturnsNulloptImmediatelyIfAlreadyShutdownAndEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Concurrency\/TestConcurrency.cpp",
+          "line": 111
+        },
+        {
+          "name": "ShutdownDoesNotDiscardRemainingMessages",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Concurrency\/TestConcurrency.cpp",
+          "line": 127
+        },
+        {
+          "name": "ShutdownIsIdempotentUnderConcurrentCalls",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Concurrency\/TestConcurrency.cpp",
+          "line": 145
+        },
+        {
+          "name": "MultiProducerSingleConsumerNoLossNoDuplication",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Concurrency\/TestConcurrency.cpp",
+          "line": 165
+        },
+        {
+          "name": "MultiProducerMultiConsumerNoLossNoDuplication",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Concurrency\/TestConcurrency.cpp",
+          "line": 192
+        },
+        {
+          "name": "PerProducerRelativeOrderIsPreservedUnderConcurrency",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Concurrency\/TestConcurrency.cpp",
+          "line": 239
+        }
+      ]
+    },
+    {
+      "name": "OrderQueueWhiteBoxTest",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "SizeReflectsPushAndPop",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Concurrency\/TestConcurrency.cpp",
+          "line": 280
+        },
+        {
+          "name": "SizeIsZeroAfterFullConcurrentDrain",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Concurrency\/TestConcurrency.cpp",
+          "line": 297
+        }
+      ]
+    },
+    {
+      "name": "WorkerTest",
+      "tests": 5,
+      "testsuite": [
+        {
+          "name": "ProcessesSingleMessageAndCreatesOneOrder",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Concurrency\/TestWorker.cpp",
+          "line": 42
+        },
+        {
+          "name": "ProcessesMultipleMessagesCreatesOrderPerMessage",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Concurrency\/TestWorker.cpp",
+          "line": 55
+        },
+        {
+          "name": "StopsImmediatelyOnShutdownWithEmptyQueue",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Concurrency\/TestWorker.cpp",
+          "line": 70
+        },
+        {
+          "name": "UnblocksAndStopsWhenShutdownCalledWhileWaiting",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Concurrency\/TestWorker.cpp",
+          "line": 91
+        },
+        {
+          "name": "ProcessesAllMessagesFromConcurrentProducers",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Concurrency\/TestWorker.cpp",
+          "line": 118
+        }
+      ]
+    },
+    {
+      "name": "ProtocolTest",
+      "tests": 16,
+      "testsuite": [
+        {
+          "name": "RoundTripPreservesAllFieldsForTypicalOrder",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Networking\/TestProtocol.cpp",
+          "line": 32
+        },
+        {
+          "name": "RoundTripPreservesLimitType",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Networking\/TestProtocol.cpp",
+          "line": 48
+        },
+        {
+          "name": "RoundTripPreservesMarketType",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Networking\/TestProtocol.cpp",
+          "line": 55
+        },
+        {
+          "name": "RoundTripPreservesBuySide",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Networking\/TestProtocol.cpp",
+          "line": 62
+        },
+        {
+          "name": "RoundTripPreservesSellSide",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Networking\/TestProtocol.cpp",
+          "line": 69
+        },
+        {
+          "name": "RoundTripPreservesGtcTif",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Networking\/TestProtocol.cpp",
+          "line": 76
+        },
+        {
+          "name": "RoundTripPreservesIocTif",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Networking\/TestProtocol.cpp",
+          "line": 83
+        },
+        {
+          "name": "RoundTripPreservesPriceWithDecimals",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Networking\/TestProtocol.cpp",
+          "line": 90
+        },
+        {
+          "name": "RoundTripPreservesZeroQuantity",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Networking\/TestProtocol.cpp",
+          "line": 99
+        },
+        {
+          "name": "RoundTripPreservesShortSymbol",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Networking\/TestProtocol.cpp",
+          "line": 106
+        },
+        {
+          "name": "RoundTripPreservesLongerSymbol",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Networking\/TestProtocol.cpp",
+          "line": 113
+        },
+        {
+          "name": "RoundTripPreservesLargeTraderID",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Networking\/TestProtocol.cpp",
+          "line": 120
+        },
+        {
+          "name": "DecodeReturnsNulloptForEmptyBytes",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Networking\/TestProtocol.cpp",
+          "line": 133
+        },
+        {
+          "name": "DecodeReturnsNulloptForTooFewBytesForFixedFields",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Networking\/TestProtocol.cpp",
+          "line": 139
+        },
+        {
+          "name": "DecodeReturnsNulloptForTruncatedSymbol",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Networking\/TestProtocol.cpp",
+          "line": 145
+        },
+        {
+          "name": "DecodeReturnsNulloptWhenSymbolLengthByteIsMissing",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Networking\/TestProtocol.cpp",
+          "line": 159
+        }
+      ]
+    },
+    {
+      "name": "TcpServerTest",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "SendingEncodedOrderReachesCoreEngine",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Networking\/TestTcpServer.cpp",
+          "line": 70
+        },
+        {
+          "name": "MultipleMessagesInOneSend_AllEventuallyReachCoreEngine",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Networking\/TestTcpServer.cpp",
+          "line": 104
+        },
+        {
+          "name": "MessageSplitAcrossTwoSends_StillReachesCoreEngine",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Networking\/TestTcpServer.cpp",
+          "line": 140
+        },
+        {
+          "name": "MultipleConcurrentClients_AllReachCoreEngineNoLossNoDuplication",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Networking\/TestTcpServer.cpp",
+          "line": 172
+        }
+      ]
+    },
+    {
+      "name": "EndToEndTest",
+      "tests": 3,
+      "testsuite": [
+        {
+          "name": "OrdersFromDifferentSymbolsViaTcp_AreIsolatedCorrectly",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/TestEndToEnd.cpp",
+          "line": 97
+        },
+        {
+          "name": "CrossingOrdersViaTcp_ActuallyMatchAndProduceTrade",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/TestEndToEnd.cpp",
+          "line": 135
+        },
+        {
+          "name": "FullProductionLikeScenario_MixedSymbolsAndMatching",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/TestEndToEnd.cpp",
+          "line": 169
+        }
+      ]
+    },
+    {
+      "name": "OrderPoolTest",
+      "tests": 5,
+      "testsuite": [
+        {
+          "name": "AllocateReturnsUniqueIndices",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Memory\/TestOrderPool.cpp",
+          "line": 11
+        },
+        {
+          "name": "FreedIndexIsReusedByNextAllocate",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Memory\/TestOrderPool.cpp",
+          "line": 23
+        },
+        {
+          "name": "GetGivesAccessToCorrectSlotData",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Memory\/TestOrderPool.cpp",
+          "line": 34
+        },
+        {
+          "name": "AllocatingBeyondCapacityReturnsSentinel",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Memory\/TestOrderPool.cpp",
+          "line": 45
+        },
+        {
+          "name": "FullCycleAllocateFreeReallocateWorksCorrectly",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Memory\/TestOrderPool.cpp",
+          "line": 58
+        }
+      ]
+    },
+    {
+      "name": "OrderRouterTest",
+      "tests": 14,
+      "testsuite": [
+        {
+          "name": "RouteSingleOrder_EventuallyAppearsInGetOrders",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Routing\/TestOrderRouter.cpp",
+          "line": 58
+        },
+        {
+          "name": "RouteMultipleOrdersSameSymbol_AllEventuallyProcessed",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Routing\/TestOrderRouter.cpp",
+          "line": 73
+        },
+        {
+          "name": "OrdersOnDifferentSymbolsAreIsolated",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Routing\/TestOrderRouter.cpp",
+          "line": 94
+        },
+        {
+          "name": "GetOrders_OnUnknownSymbol_ReturnsEmpty",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Routing\/TestOrderRouter.cpp",
+          "line": 112
+        },
+        {
+          "name": "ConcurrentRouteFromMultipleThreads_NoLossNoDuplication",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Routing\/TestOrderRouter.cpp",
+          "line": 123
+        },
+        {
+          "name": "CrossingOrdersFullyMatch_QuantityConserved",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Routing\/TestOrderRouter.cpp",
+          "line": 159
+        },
+        {
+          "name": "CancelOrder_RemovesOrderFromBook",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Routing\/TestOrderRouter.cpp",
+          "line": 187
+        },
+        {
+          "name": "GetBestBids_ReturnsHighestPriceFirst",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Routing\/TestOrderRouter.cpp",
+          "line": 207
+        },
+        {
+          "name": "GetBestAsk_ReturnsLowestPriceFirst",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Routing\/TestOrderRouter.cpp",
+          "line": 226
+        },
+        {
+          "name": "GetTradesHistory_RecordsTradeAfterMatch",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Routing\/TestOrderRouter.cpp",
+          "line": 249
+        },
+        {
+          "name": "GetAllOrders_CoversMultipleSymbols",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Routing\/TestOrderRouter.cpp",
+          "line": 273
+        },
+        {
+          "name": "Load_PreservesExplicitTimestamp",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Routing\/TestOrderRouter.cpp",
+          "line": 303
+        },
+        {
+          "name": "KnownGap_RouteDoesNotReportQueueFullSilentDrop",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Routing\/TestOrderRouter.cpp",
+          "line": 323
+        },
+        {
+          "name": "Shutdown_StopsAllWorkersWithoutHanging",
+          "file": "\/Users\/dennis\/Desktop\/Portofolio\/LimitOrderBook\/Tests\/Routing\/TestOrderRouter.cpp",
+          "line": 349
+        }
+      ]
+    }
+  ]
+}
