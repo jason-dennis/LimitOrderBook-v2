@@ -49,6 +49,10 @@ TEST(WorkerTest, ProcessesSingleMessageAndCreatesOneOrder) {
     Worker worker(engine, queue);
     worker.run();
 
+    auto deadline = std::chrono::steady_clock::now() + std::chrono::seconds(1);
+    while (engine.GetOrders(kTestSymbol).size() != 1 and std::chrono::steady_clock::now() < deadline) {
+        std::this_thread::sleep_for(std::chrono::milliseconds(1));
+    }
     EXPECT_EQ(engine.GetOrders(kTestSymbol).size(), 1u);
 }
 
@@ -64,6 +68,10 @@ TEST(WorkerTest, ProcessesMultipleMessagesCreatesOrderPerMessage) {
     Worker worker(engine, queue);
     worker.run();
 
+    auto deadline = std::chrono::steady_clock::now() + std::chrono::seconds(1);
+    while (engine.GetOrders(kTestSymbol).size() != 3 and std::chrono::steady_clock::now() < deadline) {
+        std::this_thread::sleep_for(std::chrono::milliseconds(1));
+    }
     EXPECT_EQ(engine.GetOrders(kTestSymbol).size(), 3u);
 }
 

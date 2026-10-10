@@ -44,8 +44,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3d535dd-94c8-4bea-83c1-1ab4a636eead" name="Changes" comment="add target_link for tcp_server_test">
-      <change beforePath="$PROJECT_DIR$/src/Networking/TcpServer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Networking/TcpServer.cpp" afterDir="false" />
+    <list default="true" id="e3d535dd-94c8-4bea-83c1-1ab4a636eead" name="Changes" comment="repair TcpServer">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Concurrency/TestWorker.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Concurrency/TestWorker.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,6 +140,11 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="benchmark" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="benchmark" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -216,12 +222,13 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Google Test.run_tests" />
+      <item itemvalue="CMake Application.glfw" />
+      <item itemvalue="CMake Application.uninstall" />
+      <item itemvalue="CMake Application.update_mappings" />
       <item itemvalue="CMake Application.FullTest" />
       <item itemvalue="CMake Application.LimitOrderBook" />
       <item itemvalue="CMake Application.benchmark" />
       <item itemvalue="CMake Application.benchmark_main" />
-      <item itemvalue="CMake Application.glfw" />
       <item itemvalue="CMake Application.gmock" />
       <item itemvalue="CMake Application.gmock_main" />
       <item itemvalue="CMake Application.gtest" />
@@ -231,9 +238,8 @@
       <item itemvalue="CMake Application.tcp_server_test" />
       <item itemvalue="CMake Application.trading_lib" />
       <item itemvalue="CMake Application.trading_lib_cov" />
-      <item itemvalue="CMake Application.uninstall" />
-      <item itemvalue="CMake Application.update_mappings" />
       <item itemvalue="CTest Application.All CTest" />
+      <item itemvalue="Google Test.run_tests" />
     </list>
   </component>
   <component name="SelectedDebugProfileService">{
@@ -274,7 +280,8 @@
     <MESSAGE value="ix GCC build: missing includes, remove global link flags, bump Google Benchmark to 1.9.5" />
     <MESSAGE value=" missing includes" />
     <MESSAGE value="add target_link for tcp_server_test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add target_link for tcp_server_test" />
+    <MESSAGE value="repair TcpServer" />
+    <option name="LAST_COMMIT_MESSAGE" value="repair TcpServer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
