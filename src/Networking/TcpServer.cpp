@@ -7,6 +7,8 @@
 #include <string.h>
 #include <string>
 
+#include "../../cmake-build-release/_deps/googlebenchmark-src/src/arraysize.h"
+
 TcpServer::~TcpServer() {
     Stop();
 }
@@ -60,16 +62,14 @@ void TcpServer::Start() {
 }
 
 void TcpServer::Stop() {
-    if (!running_.load()) {
+    if (!running_.exchange(false)) {
         return;
     }
 
-    running_.store(false);
-
-    int sock = listenSocket_.load();
+    int sock = listenSocket_.exchange(-1);
     if (sock != -1) {
+        shutdown(sock, SHUT_RDWR);
         close(sock);
-        listenSocket_.store(-1);
     }
 
     if (acceptThread_.joinable()) {
