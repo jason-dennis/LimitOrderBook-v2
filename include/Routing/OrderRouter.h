@@ -5,6 +5,7 @@
 #ifndef LIMITORDERBOOK_ORDERROUTER_H
 #define LIMITORDERBOOK_ORDERROUTER_H
 #include <unordered_map>
+#include <mutex>
 #include "Concurrency/LockFreeQueue.h"
 #include "Memory/OrderPool.h"
 #include "Engine/MatchingEngine.h"

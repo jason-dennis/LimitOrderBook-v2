@@ -8,6 +8,7 @@
 #include <cstdint>
 #include <thread>
 #include <shared_mutex>
+#include <mutex>
 #include "Concurrency/LockFreeQueue.h"
 #include "Memory/OrderPool.h"
 #include "Engine/MatchingEngine.h"
