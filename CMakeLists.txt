@@ -5,10 +5,6 @@ option(ENABLE_TSAN "Build tests with ThreadSanitizer" OFF)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-if(NOT APPLE)
-    set(CMAKE_CXX_FLAGS "-O0 -g")
-    set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++ -static")
-endif ()
 include(FetchContent)
 
 # --- Fetch GLFW ---------------------------------------
@@ -91,10 +87,13 @@ FetchContent_Declare(
 # --- Fetch GoogleBenchmark ----------------------------------------------------
 FetchContent_Declare(
         googlebenchmark
-        URL https://github.com/google/benchmark/archive/refs/tags/v1.8.3.tar.gz
+        URL https://github.com/google/benchmark/archive/refs/tags/v1.9.5.tar.gz
 )
 
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+set(BENCHMARK_ENABLE_TESTING OFF CACHE BOOL "" FORCE)
+set(BENCHMARK_ENABLE_WERROR OFF CACHE BOOL "" FORCE)
+set(BENCHMARK_ENABLE_GTEST_TESTS OFF CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest googlebenchmark)
 
 # --- Common sources -----------------------------------------------------------

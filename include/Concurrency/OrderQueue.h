@@ -7,6 +7,7 @@
 #include <queue>
 #include <tuple>
 #include <mutex>
+#include <optional>
 #include <condition_variable>
 #include "Domain/OrderRequest.h"
 

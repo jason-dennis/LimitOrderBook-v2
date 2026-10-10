@@ -34,7 +34,7 @@ private:
     /** @name UI Configuration Constants
      * Static options displayed in comboboxes.
      * @{ */
-    static constexpr char* SymbolOptions[] = {"AAPL", "NVDA", "MSFT", "GOOGL", "AMZN", "META", "AVGO", "MELI", "ISRG", "TSLA"};
+    static constexpr const char* SymbolOptions[] = {"AAPL", "NVDA", "MSFT", "GOOGL", "AMZN", "META", "AVGO", "MELI", "ISRG", "TSLA"};
     static constexpr const char* TIFOptions[] = {"GTC", "IOC", "FOK"};
     static constexpr const char* TypeOptions[] = {"LIMIT", "MARKET"};
     /** @} */
