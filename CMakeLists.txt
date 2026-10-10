@@ -134,8 +134,8 @@ target_link_libraries(trading_lib PUBLIC imgui_lib)
 # ---- Test Server ----------
 add_executable(tcp_server_test
         src/Networking/TestServer.cpp
-        src/Networking/TcpServer.cpp
 )
+target_link_libraries(tcp_server_test PRIVATE trading_lib)
 target_include_directories(tcp_server_test PRIVATE include)
 
 # --- Tests --------------------------------------------------------------------
