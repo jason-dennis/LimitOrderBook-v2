@@ -44,9 +44,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3d535dd-94c8-4bea-83c1-1ab4a636eead" name="Changes" comment="ix GCC build: missing includes, remove global link flags, bump Google Benchmark to 1.9.5">
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e3d535dd-94c8-4bea-83c1-1ab4a636eead" name="Changes" comment="add target_link for tcp_server_test">
+      <change beforePath="$PROJECT_DIR$/src/Networking/TcpServer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Networking/TcpServer.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +272,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ix GCC build: missing includes, remove global link flags, bump Google Benchmark to 1.9.5" />
-    <option name="LAST_COMMIT_MESSAGE" value="ix GCC build: missing includes, remove global link flags, bump Google Benchmark to 1.9.5" />
+    <MESSAGE value=" missing includes" />
+    <MESSAGE value="add target_link for tcp_server_test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add target_link for tcp_server_test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
