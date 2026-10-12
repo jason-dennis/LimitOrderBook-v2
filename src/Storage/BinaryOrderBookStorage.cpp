@@ -436,7 +436,7 @@ bool BinaryOrderBook::CanFillQuantityBids(uint32_t Quantity, uint64_t Price)  {
                         L1 &= ~(1ULL<<bit_level1);
 
                         uint64_t Price_ = ind_level1*64 + bit_level1;
-                        if (Price_ > Price) {
+                        if (Price_ < Price) {
                             return false;
                         }
                         uint32_t idx = BidList_[Price_].GetHead();
@@ -504,7 +504,7 @@ void BinaryOrderBook::PopBestAsk() {
             uint32_t index = AskList_[Price].GetHead();
             auto& order = Pool_.Get(index);
             order.Status = OrderStatus::FILLED;
-            DeleteBid(index);
+            DeleteAsk(index);
             Pool_.Free(index);
             return;
         }
