@@ -28,6 +28,7 @@
       <config projectName="LimitOrderBook" targetName="trading_lib" />
       <config projectName="LimitOrderBook" targetName="uninstall" folderName="GLFW3" />
       <config projectName="LimitOrderBook" targetName="gmock" />
+      <config projectName="LimitOrderBook" targetName="latency_bench" />
       <config projectName="LimitOrderBook" targetName="update_mappings" folderName="GLFW3" />
       <config projectName="LimitOrderBook" targetName="LimitOrderBook" />
       <config projectName="LimitOrderBook" targetName="FullTest" />
@@ -44,11 +45,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3d535dd-94c8-4bea-83c1-1ab4a636eead" name="Changes" comment="repair TestWorker tests: ProcessesMultipleMessagesCreatesOrderPerMessage and ProcessesSingleMessageAndCreatesOneOrder">
-      <change afterPath="$PROJECT_DIR$/Tests/benchmarks/LatencyBench.cpp" afterDir="false" />
+    <list default="true" id="e3d535dd-94c8-4bea-83c1-1ab4a636eead" name="Changes" comment="repair BinaryOrderBookStorage.cpp">
+      <change afterPath="$PROJECT_DIR$/Tests/Memory/TestIdIndexMap.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Memory/IdIndexMap.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Domain/OrderPod.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Domain/OrderPod.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/Storage/BinaryOrderBookStorage.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Storage/BinaryOrderBookStorage.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Storage/BinaryOrderBookStorage.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Storage/BinaryOrderBookStorage.cpp" afterDir="false" />
     </list>
@@ -128,6 +129,11 @@
   }
 }</component>
   <component name="RunManager" selected="CTest Application.All CTest">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="run_tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="run_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="run_tests" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -184,6 +190,11 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="latency_bench" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="latency_bench" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="latency_bench">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="run_benchmarks" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="run_benchmarks" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="run_benchmarks">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -221,24 +232,25 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Google Test.run_tests" />
+      <item itemvalue="CMake Application.glfw" />
+      <item itemvalue="CMake Application.uninstall" />
+      <item itemvalue="CMake Application.update_mappings" />
       <item itemvalue="CMake Application.FullTest" />
       <item itemvalue="CMake Application.LimitOrderBook" />
       <item itemvalue="CMake Application.benchmark" />
       <item itemvalue="CMake Application.benchmark_main" />
-      <item itemvalue="CMake Application.glfw" />
       <item itemvalue="CMake Application.gmock" />
       <item itemvalue="CMake Application.gmock_main" />
       <item itemvalue="CMake Application.gtest" />
       <item itemvalue="CMake Application.gtest_main" />
       <item itemvalue="CMake Application.imgui_lib" />
+      <item itemvalue="CMake Application.latency_bench" />
       <item itemvalue="CMake Application.run_benchmarks" />
       <item itemvalue="CMake Application.tcp_server_test" />
       <item itemvalue="CMake Application.trading_lib" />
       <item itemvalue="CMake Application.trading_lib_cov" />
-      <item itemvalue="CMake Application.uninstall" />
-      <item itemvalue="CMake Application.update_mappings" />
       <item itemvalue="CTest Application.All CTest" />
+      <item itemvalue="Google Test.run_tests" />
     </list>
   </component>
   <component name="SelectedDebugProfileService">{
@@ -281,7 +293,10 @@
     <MESSAGE value="add target_link for tcp_server_test" />
     <MESSAGE value="repair TcpServer" />
     <MESSAGE value="repair TestWorker tests: ProcessesMultipleMessagesCreatesOrderPerMessage and ProcessesSingleMessageAndCreatesOneOrder" />
-    <option name="LAST_COMMIT_MESSAGE" value="repair TestWorker tests: ProcessesMultipleMessagesCreatesOrderPerMessage and ProcessesSingleMessageAndCreatesOneOrder" />
+    <MESSAGE value="binary update" />
+    <MESSAGE value="repair cmake" />
+    <MESSAGE value="repair BinaryOrderBookStorage.cpp" />
+    <option name="LAST_COMMIT_MESSAGE" value="repair BinaryOrderBookStorage.cpp" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

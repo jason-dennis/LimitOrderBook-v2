@@ -5,6 +5,7 @@
 #ifndef LIMITORDERBOOK_BINARYORDERBOOK_H
 #define LIMITORDERBOOK_BINARYORDERBOOK_H
 #include "Memory/OrderPool.h"
+#include "Memory/IdIndexMap.h"
 
 #include<unordered_map>
 /**
@@ -110,7 +111,6 @@ private:
     const int DIM_level2 =  4'884;
     const int DIM_level3 = 77;
     const int DIM_level4 = 2;
-    const int MAX_ORDER_ID = 16'000'000;
 
     std::vector<uint64_t>level1_bid;///< Level 1 bitmap for bids
     std::vector<uint64_t>level2_bid;///< Level 2 bitmap for bids
@@ -124,7 +124,7 @@ private:
 
     ListMap BidList_;///< Price-to-order-queue map for bids
     ListMap AskList_;///< Price-to-order-queue map for asks
-    std::vector<uint32_t> IdToIndex;
+    IdIndexMap IdToIndex;
 
 public:
 
@@ -133,8 +133,7 @@ public:
       level1_bid(DIM_level1), level2_bid(DIM_level2),
       level3_bid(DIM_level3), level4_bid(DIM_level4),
       level1_ask(DIM_level1), level2_ask(DIM_level2),
-      level3_ask(DIM_level3), level4_ask(DIM_level4),
-      IdToIndex(MAX_ORDER_ID)
+      level3_ask(DIM_level3), level4_ask(DIM_level4)
     {}
     ~BinaryOrderBook() = default;
 

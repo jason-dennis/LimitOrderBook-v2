@@ -15,8 +15,7 @@ uint64_t BinaryOrderBook::CalcBit(uint64_t x) {
 void BinaryOrderBook::AddOrder(uint32_t index) {
 
     auto& order = Pool_.Get(index);
-    assert(order.OrderId < MAX_ORDER_ID);
-    IdToIndex[order.OrderId] = index;
+    IdToIndex.Set(order.OrderId, index);
 
     uint64_t Price = order.Price;
 
@@ -67,7 +66,7 @@ void BinaryOrderBook::DeleteBid(uint32_t index) {
 
     auto& list = BidList_[Price];
     list.DeleteNode(index, Pool_);
-    IdToIndex[order.OrderId] = NIL;
+    IdToIndex.Clear(order.OrderId);
 
     if (list.IsEmpty()) {
         uint64_t ind_level1 = CalcInd(Price);
@@ -101,7 +100,7 @@ void BinaryOrderBook::DeleteAsk(uint32_t index) {
 
     auto& list = AskList_[Price];
     list.DeleteNode(index, Pool_);
-    IdToIndex[order.OrderId] = NIL;
+    IdToIndex.Clear(order.OrderId);
 
     if (list.IsEmpty()) {
         uint64_t ind_level1 = CalcInd(Price);
@@ -131,11 +130,8 @@ void BinaryOrderBook::DeleteAsk(uint32_t index) {
 bool BinaryOrderBook::CancelOrder(int order_id) {
 
     uint32_t id = static_cast<uint32_t>(order_id);
-    if (id >= MAX_ORDER_ID) {
-        return false;
-    }
 
-    uint32_t index = IdToIndex[id];
+    uint32_t index = IdToIndex.Get(id);
     if (index == NIL) {
         return false;
     }
@@ -157,11 +153,8 @@ bool BinaryOrderBook::CancelOrder(int order_id) {
 void BinaryOrderBook::UpdateQuantity(int order_id, int new_quantity) {
 
     uint32_t id = static_cast<uint32_t>(order_id);
-    if (id >= MAX_ORDER_ID) {
-        return;
-    }
 
-    uint32_t index = IdToIndex[id];
+    uint32_t index = IdToIndex.Get(id);
     if (index == NIL) {
         return;
     }

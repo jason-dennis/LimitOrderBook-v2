@@ -155,6 +155,7 @@ add_executable(run_tests
         Tests/TestEndToEnd.cpp
         Tests/Memory/TestOrderPool.cpp
         Tests/Routing/TestOrderRouter.cpp
+        Tests/Memory/TestIdIndexMap.cpp
 )
 target_link_libraries(run_tests PRIVATE trading_lib_cov gtest_main )
 
