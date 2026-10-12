@@ -6,7 +6,7 @@
 #define LIMITORDERBOOK_ORDERPOD_H
 #include <cstdint>
 #include "Domain/order.h"
-
+inline constexpr uint32_t NIL = UINT32_MAX;
 struct OrderPod {
     uint64_t Price;
     uint64_t Timestamp;
@@ -18,6 +18,8 @@ struct OrderPod {
     OrderType Type;
     TimeInForce TIF;
     OrderStatus Status;
+    uint32_t Next;
+    uint32_t Prev;
 };
 
 #endif //LIMITORDERBOOK_ORDERPOD_H

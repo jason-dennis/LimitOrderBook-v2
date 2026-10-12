@@ -191,6 +191,7 @@ gtest_discover_tests(run_tests)
 add_executable(run_benchmarks
         Tests/benchmarks/OrderBookBenchmarkv2.cpp
         Tests/benchmarks/MultithreadedBenchmark.cpp
+        Tests/benchmarks/LatencyBench.cpp
 )
 target_link_libraries(run_benchmarks PRIVATE trading_lib benchmark::benchmark_main)
 # ------------ Full Test ------------

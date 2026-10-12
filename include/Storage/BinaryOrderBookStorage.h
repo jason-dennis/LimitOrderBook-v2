@@ -17,66 +17,54 @@
 class BinaryOrderBook {
 private:
     OrderPool& Pool_;
-    class Node {
-    private:
-        const uint32_t index_;
-        Node* next_;
-        Node* prev_;
-    public:
-        Node(const uint32_t index): index_(index), next_(nullptr),prev_(nullptr){}
-
-        Node* GetNext() const {return next_;}
-        Node* GetPrev() const {return prev_;}
-
-        uint32_t GetIndex() const {return index_;}
-
-        void SetPrev(Node* prev){prev_ = prev;}
-        void SetNext(Node* next) {next_ = next;}
-
-    };
     class LinkedList {
     private:
-        Node* head_;
-        Node* tail_;
+        uint32_t head_;
+        uint32_t tail_;
     public:
 
-        LinkedList(): head_(nullptr), tail_(nullptr){}
+        LinkedList() : head_(NIL), tail_(NIL) {}
 
-        Node* AddNode(uint32_t index) {
-            Node* node= new Node(index);
-            if (!tail_) {
-                head_=tail_=node;
+        void AddNode(uint32_t index, OrderPool& pool) {
+            auto& order = pool.Get(index);
+            order.Next = NIL;
+            order.Prev = tail_;
+
+            if (tail_ == NIL) {
+                head_ = index;
             }
             else {
-                tail_->SetNext(node);
-                node->SetPrev(tail_);
-                tail_ = node;
+                pool.Get(tail_).Next = index;
             }
-            return node;
+            tail_ = index;
         }
 
-        void DeleteNode(Node* node) {
-            if (node->GetPrev()) {
-                node->GetPrev()->SetNext(node->GetNext());
+        void DeleteNode(uint32_t index, OrderPool& pool) {
+            auto& order = pool.Get(index);
+
+            if (order.Prev != NIL) {
+                pool.Get(order.Prev).Next = order.Next;
             }
-            if (node->GetNext()) {
-                node->GetNext()->SetPrev(node->GetPrev());
+            else {
+                head_ = order.Next;
             }
 
-            if (node == head_) {
-                head_=node->GetNext();
+            if (order.Next != NIL) {
+                pool.Get(order.Next).Prev = order.Prev;
             }
-            if (node == tail_) {
-                tail_=node->GetPrev();
+            else {
+                tail_ = order.Prev;
             }
-            delete node;
+
+            order.Next = NIL;
+            order.Prev = NIL;
         }
 
         bool IsEmpty() const {
-            return head_ == nullptr;
+            return head_ == NIL;
         }
 
-        Node* GetHead() const{
+        uint32_t GetHead() const {
             return head_;
         }
     };
@@ -122,6 +110,7 @@ private:
     const int DIM_level2 =  4'884;
     const int DIM_level3 = 77;
     const int DIM_level4 = 2;
+    const int MAX_ORDER_ID = 16'000'000;
 
     std::vector<uint64_t>level1_bid;///< Level 1 bitmap for bids
     std::vector<uint64_t>level2_bid;///< Level 2 bitmap for bids
@@ -135,8 +124,7 @@ private:
 
     ListMap BidList_;///< Price-to-order-queue map for bids
     ListMap AskList_;///< Price-to-order-queue map for asks
-    std::unordered_map<int,Node*>BidLocation;///< Order ID to node lookup for bids
-    std::unordered_map<int,Node*>AskLocation;///< Order ID to node lookup for asks
+    std::vector<uint32_t> IdToIndex;
 
 public:
 
@@ -145,7 +133,8 @@ public:
       level1_bid(DIM_level1), level2_bid(DIM_level2),
       level3_bid(DIM_level3), level4_bid(DIM_level4),
       level1_ask(DIM_level1), level2_ask(DIM_level2),
-      level3_ask(DIM_level3), level4_ask(DIM_level4)
+      level3_ask(DIM_level3), level4_ask(DIM_level4),
+      IdToIndex(MAX_ORDER_ID)
     {}
     ~BinaryOrderBook() = default;
 
@@ -165,7 +154,7 @@ public:
      * @brief Removes an order from the book based on its ID.
      * @param order_id The unique identifier of the order to be removed.
      */
-    void CancelOrder(int order_id);
+    bool CancelOrder(int order_id);
 
     /**
      * @brief Modifies the volume of an existing order.
@@ -175,10 +164,10 @@ public:
     void UpdateQuantity(int order_id,int new_quantity);
 
     /// @brief Removes a bid order from the book.
-    void DeleteBid(int order_id,Node* node, uint64_t Price);
+    void DeleteBid(uint32_t index);
 
     /// @brief Removes an ask order from the book.
-    void DeleteAsk(int order_id, Node* node, uint64_t Price);
+    void DeleteAsk(uint32_t index);
 
     /**
      * @brief Accesses the highest-priced Buy order.

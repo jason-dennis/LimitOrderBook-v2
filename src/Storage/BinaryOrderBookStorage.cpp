@@ -2,7 +2,7 @@
 // Created by denni on 3/15/2026.
 //
 #include "Storage/BinaryOrderBookStorage.h"
-
+#include <cassert>
 
 uint64_t BinaryOrderBook::CalcInd(uint64_t x) {
     return x/64;
@@ -15,173 +15,176 @@ uint64_t BinaryOrderBook::CalcBit(uint64_t x) {
 void BinaryOrderBook::AddOrder(uint32_t index) {
 
     auto& order = Pool_.Get(index);
-    if (order.Side==OrderSide::BUY) {
-        uint64_t Price = order.Price;
-        Node* node = BidList_[Price].AddNode(index);
-        BidLocation[order.OrderId]=node;
+    assert(order.OrderId < MAX_ORDER_ID);
+    IdToIndex[order.OrderId] = index;
+
+    uint64_t Price = order.Price;
+
+    if (order.Side == OrderSide::BUY) {
+        BidList_[Price].AddNode(index, Pool_);
 
         uint64_t ind_level1 = CalcInd(Price);
-        uint64_t bit_level1= CalcBit(Price);
-        level1_bid[ind_level1]|=(1ULL<<bit_level1);
+        uint64_t bit_level1 = CalcBit(Price);
+        level1_bid[ind_level1] |= (1ULL << bit_level1);
 
         uint64_t ind_level2 = CalcInd(ind_level1);
-        uint64_t bit_level2= CalcBit(ind_level1);
-        level2_bid[ind_level2]|=(1ULL<<bit_level2);
+        uint64_t bit_level2 = CalcBit(ind_level1);
+        level2_bid[ind_level2] |= (1ULL << bit_level2);
 
         uint64_t ind_level3 = CalcInd(ind_level2);
-        uint64_t bit_level3= CalcBit(ind_level2);
-        level3_bid[ind_level3]|=(1ULL<<bit_level3);
+        uint64_t bit_level3 = CalcBit(ind_level2);
+        level3_bid[ind_level3] |= (1ULL << bit_level3);
 
         uint64_t ind_level4 = CalcInd(ind_level3);
-        uint64_t bit_level4= CalcBit(ind_level3);
-        level4_bid[ind_level4]|=(1ULL<<bit_level4);
+        uint64_t bit_level4 = CalcBit(ind_level3);
+        level4_bid[ind_level4] |= (1ULL << bit_level4);
     }
     else {
-        uint64_t Price = order.Price;
-        Node* node = AskList_[Price].AddNode(index);
-        AskLocation[order.OrderId]=node;
+        AskList_[Price].AddNode(index, Pool_);
 
         uint64_t ind_level1 = CalcInd(Price);
-        uint64_t bit_level1= CalcBit(Price);
-        level1_ask[ind_level1]|=(1ULL<<bit_level1);
+        uint64_t bit_level1 = CalcBit(Price);
+        level1_ask[ind_level1] |= (1ULL << bit_level1);
 
         uint64_t ind_level2 = CalcInd(ind_level1);
-        uint64_t bit_level2= CalcBit(ind_level1);
-        level2_ask[ind_level2]|=(1ULL<<bit_level2);
+        uint64_t bit_level2 = CalcBit(ind_level1);
+        level2_ask[ind_level2] |= (1ULL << bit_level2);
 
         uint64_t ind_level3 = CalcInd(ind_level2);
-        uint64_t bit_level3= CalcBit(ind_level2);
-        level3_ask[ind_level3]|=(1ULL<<bit_level3);
+        uint64_t bit_level3 = CalcBit(ind_level2);
+        level3_ask[ind_level3] |= (1ULL << bit_level3);
 
         uint64_t ind_level4 = CalcInd(ind_level3);
-        uint64_t bit_level4= CalcBit(ind_level3);
-        level4_ask[ind_level4]|=(1ULL<<bit_level4);
+        uint64_t bit_level4 = CalcBit(ind_level3);
+        level4_ask[ind_level4] |= (1ULL << bit_level4);
     }
-
-
 }
 
-void BinaryOrderBook::DeleteBid(int order_id, Node* node, uint64_t Price) {
+void BinaryOrderBook::DeleteBid(uint32_t index) {
 
-    BidList_[Price].DeleteNode(node);
-    BidLocation.erase(order_id);
+    auto& order = Pool_.Get(index);
+    uint64_t Price = order.Price;
 
-    if (BidList_[Price].IsEmpty()) {
+    auto& list = BidList_[Price];
+    list.DeleteNode(index, Pool_);
+    IdToIndex[order.OrderId] = NIL;
+
+    if (list.IsEmpty()) {
         uint64_t ind_level1 = CalcInd(Price);
-        uint64_t bit_level1= CalcBit(Price);
-        level1_bid[ind_level1] &= ~(1ULL<<bit_level1);
+        uint64_t bit_level1 = CalcBit(Price);
+        level1_bid[ind_level1] &= ~(1ULL << bit_level1);
 
         if (!level1_bid[ind_level1]) {
             uint64_t ind_level2 = CalcInd(ind_level1);
-            uint64_t bit_level2= CalcBit(ind_level1);
-            level2_bid[ind_level2] &= ~(1ULL<<bit_level2);
+            uint64_t bit_level2 = CalcBit(ind_level1);
+            level2_bid[ind_level2] &= ~(1ULL << bit_level2);
 
             if (!level2_bid[ind_level2]) {
                 uint64_t ind_level3 = CalcInd(ind_level2);
-                uint64_t bit_level3= CalcBit(ind_level2);
-                level3_bid[ind_level3] &= ~(1ULL<<bit_level3);
+                uint64_t bit_level3 = CalcBit(ind_level2);
+                level3_bid[ind_level3] &= ~(1ULL << bit_level3);
 
                 if (!level3_bid[ind_level3]) {
                     uint64_t ind_level4 = CalcInd(ind_level3);
-                    uint64_t bit_level4= CalcBit(ind_level3);
-                    level4_bid[ind_level4] &= ~(1ULL<<bit_level4);
+                    uint64_t bit_level4 = CalcBit(ind_level3);
+                    level4_bid[ind_level4] &= ~(1ULL << bit_level4);
                 }
             }
         }
     }
 }
 
-void BinaryOrderBook::DeleteAsk(int order_id, Node* node, uint64_t Price) {
-    AskList_[Price].DeleteNode(node);
-    AskLocation.erase(order_id);
+void BinaryOrderBook::DeleteAsk(uint32_t index) {
 
-    if (AskList_[Price].IsEmpty()) {
+    auto& order = Pool_.Get(index);
+    uint64_t Price = order.Price;
+
+    auto& list = AskList_[Price];
+    list.DeleteNode(index, Pool_);
+    IdToIndex[order.OrderId] = NIL;
+
+    if (list.IsEmpty()) {
         uint64_t ind_level1 = CalcInd(Price);
-        uint64_t bit_level1= CalcBit(Price);
-        level1_ask[ind_level1] &= ~(1ULL<<bit_level1);
+        uint64_t bit_level1 = CalcBit(Price);
+        level1_ask[ind_level1] &= ~(1ULL << bit_level1);
 
         if (!level1_ask[ind_level1]) {
             uint64_t ind_level2 = CalcInd(ind_level1);
-            uint64_t bit_level2= CalcBit(ind_level1);
-            level2_ask[ind_level2] &= ~(1ULL<<bit_level2);
+            uint64_t bit_level2 = CalcBit(ind_level1);
+            level2_ask[ind_level2] &= ~(1ULL << bit_level2);
 
             if (!level2_ask[ind_level2]) {
                 uint64_t ind_level3 = CalcInd(ind_level2);
-                uint64_t bit_level3= CalcBit(ind_level2);
-                level3_ask[ind_level3] &= ~(1ULL<<bit_level3);
+                uint64_t bit_level3 = CalcBit(ind_level2);
+                level3_ask[ind_level3] &= ~(1ULL << bit_level3);
 
                 if (!level3_ask[ind_level3]) {
                     uint64_t ind_level4 = CalcInd(ind_level3);
-                    uint64_t bit_level4= CalcBit(ind_level3);
-                    level4_ask[ind_level4] &= ~(1ULL<<bit_level4);
+                    uint64_t bit_level4 = CalcBit(ind_level3);
+                    level4_ask[ind_level4] &= ~(1ULL << bit_level4);
                 }
             }
         }
     }
 }
 
-void BinaryOrderBook::CancelOrder(int order_id) {
+bool BinaryOrderBook::CancelOrder(int order_id) {
 
-    auto bidIt = BidLocation.find(order_id);
-    if (bidIt != BidLocation.end()) {
-        auto* node = bidIt->second;
-        auto index = node->GetIndex();;
-        auto& order = Pool_.Get(index);
-        uint64_t Price = order.Price;
-        order.Status = (OrderStatus::CANCELED);
-        DeleteBid(order_id, bidIt->second, Price);
-        Pool_.Free(index);
-        return;
+    uint32_t id = static_cast<uint32_t>(order_id);
+    if (id >= MAX_ORDER_ID) {
+        return false;
     }
 
-    auto askIt =  AskLocation.find(order_id);
-    if (askIt != AskLocation.end()) {
-        auto* node = askIt->second;
-        auto index = node->GetIndex();
-        auto& order = Pool_.Get(index);
-        uint64_t Price = order.Price;
-        order.Status = (OrderStatus::CANCELED);
-        DeleteAsk(order_id, askIt->second, Price);
-        Pool_.Free(index);
+    uint32_t index = IdToIndex[id];
+    if (index == NIL) {
+        return false;
     }
+
+    auto& order = Pool_.Get(index);
+    order.Status = OrderStatus::CANCELED;
+
+    if (order.Side == OrderSide::BUY) {
+        DeleteBid(index);
+    }
+    else {
+        DeleteAsk(index);
+    }
+
+    Pool_.Free(index);
+    return true;
 }
 
 void BinaryOrderBook::UpdateQuantity(int order_id, int new_quantity) {
 
-    auto bidIt = BidLocation.find(order_id);
-    if (bidIt != BidLocation.end()) {
-        auto* node = bidIt->second;
-        auto index = node->GetIndex();
-        auto& order = Pool_.Get(index);
-        order.Quantity = (new_quantity);
-        if (new_quantity > 0) {
-            order.Status = (OrderStatus::PARTIALLY_FILLED);
-        }
-        else {
-            order.Status = (OrderStatus::FILLED);
-            DeleteBid(order_id,bidIt->second,order.Price);
-            Pool_.Free(index);
-        }
+    uint32_t id = static_cast<uint32_t>(order_id);
+    if (id >= MAX_ORDER_ID) {
         return;
     }
 
-    auto askIt = AskLocation.find(order_id);
-    if (askIt != AskLocation.end()) {
-        auto* node = askIt->second;
-        auto index = node->GetIndex();
-        auto& order = Pool_.Get(index);
-        order.Quantity = (new_quantity);
-        if (new_quantity > 0) {
-            order.Status = (OrderStatus::PARTIALLY_FILLED);
-        }
-        else {
-            order.Status = (OrderStatus::FILLED);
-            DeleteAsk(order_id,askIt->second,order.Price);
-            Pool_.Free(index);
-        }
+    uint32_t index = IdToIndex[id];
+    if (index == NIL) {
+        return;
     }
 
+    auto& order = Pool_.Get(index);
 
+    if (new_quantity > 0) {
+        order.Quantity = static_cast<uint32_t>(new_quantity);
+        order.Status = OrderStatus::PARTIALLY_FILLED;
+        return;
+    }
+
+    order.Quantity = 0;
+    order.Status = OrderStatus::FILLED;
+
+    if (order.Side == OrderSide::BUY) {
+        DeleteBid(index);
+    }
+    else {
+        DeleteAsk(index);
+    }
+
+    Pool_.Free(index);
 }
 
 const uint32_t BinaryOrderBook::GetBestBid()  {
@@ -202,12 +205,11 @@ const uint32_t BinaryOrderBook::GetBestBid()  {
 
             uint64_t Price = ind_level1*64 + bit_level1;
 
-            Node* node = BidList_[Price].GetHead();
-            return node->GetIndex();
+            return BidList_[Price].GetHead();
         }
     }
 
-    return UINT32_MAX;
+    return NIL;
 }
 
 const uint32_t BinaryOrderBook::GetBestAsk() {
@@ -227,12 +229,11 @@ const uint32_t BinaryOrderBook::GetBestAsk() {
 
             uint64_t Price = ind_level1*64 + bit_level1;
 
-            Node* node = AskList_[Price].GetHead();
-            return node->GetIndex();
+            return AskList_[Price].GetHead();
         }
     }
 
-    return UINT32_MAX;
+    return NIL;
 
 }
 
@@ -268,14 +269,14 @@ std::vector<uint32_t> BinaryOrderBook::GetBestBids(uint32_t x)  {
                         L1 &= ~(1ULL<<bit_level1);
 
                         uint64_t Price = ind_level1*64 + bit_level1;
-                        Node* node = BidList_[Price].GetHead();
+                        uint32_t idx = BidList_[Price].GetHead();
 
-                        while (node != nullptr) {
-                            result.push_back(node->GetIndex());
+                        while (idx != NIL) {
+                            result.push_back(idx);
                             if (result.size() >= x) {
                                 return result;
                             }
-                            node = node->GetNext();
+                            idx = Pool_.Get(idx).Next;
                         }
                     }
                 }
@@ -317,13 +318,14 @@ std::vector<uint32_t> BinaryOrderBook::GetBestAsks(uint32_t x)  {
                         L1 &= ~(1ULL<<bit_level1);
 
                         uint64_t Price = ind_level1*64 + bit_level1;
-                        Node* node = AskList_[Price].GetHead();
-                        while (node != nullptr) {
-                            result.push_back(node->GetIndex());
+                        uint32_t idx = AskList_[Price].GetHead();
+
+                        while (idx != NIL) {
+                            result.push_back(idx);
                             if (result.size() >= x) {
                                 return result;
                             }
-                            node = node->GetNext();
+                            idx = Pool_.Get(idx).Next;
                         }
                     }
                 }
@@ -388,15 +390,14 @@ bool BinaryOrderBook::CanFillQuantityAsks(uint32_t Quantity, uint64_t Price)  {
                         if (Price_ > Price) {
                             return false;
                         }
-                        Node* node = AskList_[Price_].GetHead();
-                        while (node != nullptr) {
-                            auto index = node->GetIndex();
-                            auto& order = Pool_.Get(index);
+                        uint32_t idx = AskList_[Price_].GetHead();
+                        while (idx != NIL) {
+                            auto& order = Pool_.Get(idx);
                             Q += order.Quantity;
                             if (Q >= Quantity) {
                                 return true;
                             }
-                            node = node->GetNext();
+                            idx = order.Next;
                         }
                     }
                 }
@@ -435,18 +436,17 @@ bool BinaryOrderBook::CanFillQuantityBids(uint32_t Quantity, uint64_t Price)  {
                         L1 &= ~(1ULL<<bit_level1);
 
                         uint64_t Price_ = ind_level1*64 + bit_level1;
-                        if (Price_ < Price) {
+                        if (Price_ > Price) {
                             return false;
                         }
-                        Node* node = BidList_[Price_].GetHead();
-                        while (node != nullptr) {
-                            auto index = node->GetIndex();
-                            auto& order = Pool_.Get(index);
+                        uint32_t idx = BidList_[Price_].GetHead();
+                        while (idx != NIL) {
+                            auto& order = Pool_.Get(idx);
                             Q += order.Quantity;
                             if (Q >= Quantity) {
                                 return true;
                             }
-                            node = node->GetNext();
+                            idx = order.Next;
                         }
                     }
                 }
@@ -474,13 +474,12 @@ void BinaryOrderBook::PopBestBid() {
 
             uint64_t Price = ind_level1*64 + bit_level1;
 
-            Node* node = BidList_[Price].GetHead();
-            auto index = node->GetIndex();
+            uint32_t index = BidList_[Price].GetHead();
             auto& order = Pool_.Get(index);
-            DeleteBid(order.OrderId,node,Price);
-            order.Status = (OrderStatus::FILLED);
+            order.Status = OrderStatus::FILLED;
+            DeleteBid(index);
             Pool_.Free(index);
-            return ;
+            return;
         }
     }
 }
@@ -502,11 +501,10 @@ void BinaryOrderBook::PopBestAsk() {
 
             uint64_t Price = ind_level1*64 + bit_level1;
 
-            Node* node = AskList_[Price].GetHead();
-            auto index = node->GetIndex();
+            uint32_t index = AskList_[Price].GetHead();
             auto& order = Pool_.Get(index);
-            DeleteAsk(order.OrderId,node,Price);
-            order.Status = (OrderStatus::FILLED);
+            order.Status = OrderStatus::FILLED;
+            DeleteBid(index);
             Pool_.Free(index);
             return;
         }
