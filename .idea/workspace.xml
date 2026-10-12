@@ -45,13 +45,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3d535dd-94c8-4bea-83c1-1ab4a636eead" name="Changes" comment="repair BinaryOrderBookStorage.cpp">
-      <change afterPath="$PROJECT_DIR$/Tests/Memory/TestIdIndexMap.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/Memory/IdIndexMap.h" afterDir="false" />
+    <list default="true" id="e3d535dd-94c8-4bea-83c1-1ab4a636eead" name="Changes" comment="Add IdIndexMap.h">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Storage/BinaryOrderBookStorage.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Storage/BinaryOrderBookStorage.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Storage/BinaryOrderBookStorage.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Storage/BinaryOrderBookStorage.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/benchmarks/LatencyBench.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/benchmarks/LatencyBench.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,7 +293,8 @@
     <MESSAGE value="binary update" />
     <MESSAGE value="repair cmake" />
     <MESSAGE value="repair BinaryOrderBookStorage.cpp" />
-    <option name="LAST_COMMIT_MESSAGE" value="repair BinaryOrderBookStorage.cpp" />
+    <MESSAGE value="Add IdIndexMap.h" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add IdIndexMap.h" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
