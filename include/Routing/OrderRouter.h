@@ -32,6 +32,7 @@ public:
     void Load(OrderRequest& request, uint64_t timestamp);
     void CancelOrder(int order_id, const std::string& Symbol);
     std::vector<TradePod> GetTradesHistory(const std::string &Symbol);
+    SymbolStats GetStats(const std::string &Symbol);
     std::vector<OrderPod> GetOrders(const std::string &Symbol);
     std::vector<OrderPod> GetBestBids(int x, std::string& Symbol);
     std::vector<OrderPod> GetBestAsk(int x, std::string& Symbol);

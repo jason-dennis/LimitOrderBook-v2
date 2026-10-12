@@ -47,7 +47,9 @@ void OrderRouter::Load(OrderRequest& request, uint64_t timestamp){
     };
     std::shared_lock<std::shared_mutex> lock(RegisteryMutex_);
     auto& Resources = Resources_.at(SymbolHash);
-    Resources->Queue.Push(order);
+    if (!Resources->Queue.Push(order)) {
+        Resources->QueueDrops.fetch_add(1, std::memory_order_relaxed);
+    }
 }
 void OrderRouter::Route(OrderRequest& request) {
 
@@ -66,7 +68,9 @@ void OrderRouter::Route(OrderRequest& request) {
     };
     std::shared_lock<std::shared_mutex> lock(RegisteryMutex_);
     auto& Resources = Resources_.at(SymbolHash);
-    Resources->Queue.Push(order);
+    if (!Resources->Queue.Push(order)) {
+        Resources->QueueDrops.fetch_add(1, std::memory_order_relaxed);
+    }
 }
 void OrderRouter::CancelOrder(int order_id, const std::string &Symbol) {
     auto SymbolHash = CheckSymbolId(Symbol);
@@ -104,7 +108,24 @@ std::vector<TradePod> OrderRouter::GetTradesHistory(const std::string &Symbol) {
         Resources = Resources_.at(*SymbolHash).get();
     }
     std::shared_lock<std::shared_mutex> SymbolLock(Resources->StateMutex);
-    return Resources->Trades;
+    return Resources->Trades.Snapshot();
+}
+
+SymbolStats OrderRouter::GetStats(const std::string &Symbol) {
+    auto SymbolHash = CheckSymbolId(Symbol);
+    if(!SymbolHash.has_value()) return {};
+    SymbolResources* Resources;
+    {
+        std::shared_lock<std::shared_mutex> lock(RegisteryMutex_);
+        Resources = Resources_.at(*SymbolHash).get();
+    }
+    SymbolStats stats;
+    stats.OrdersProcessed = Resources->OrdersProcessed.load(std::memory_order_relaxed);
+    stats.OrdersRejected  = Resources->OrdersRejected.load(std::memory_order_relaxed);
+    stats.QueueDrops      = Resources->QueueDrops.load(std::memory_order_relaxed);
+    stats.TradesTotal     = Resources->TradesTotal.load(std::memory_order_relaxed);
+    stats.VolumeTotal     = Resources->VolumeTotal.load(std::memory_order_relaxed);
+    return stats;
 }
 
 std::vector<OrderPod> OrderRouter::GetOrders(const std::string &Symbol) {

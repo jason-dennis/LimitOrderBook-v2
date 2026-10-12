@@ -154,36 +154,56 @@ int main(int argc, char** argv) {
     for (auto& t : traffics) totalOrdersSubmitted += t.ordersSubmitted.load();
     for (auto& t : traffics) totalCancelsSubmitted += t.cancelsSubmitted.load();
 
+    // Sum of the per-symbol counters kept by the workers and the router.
+    auto collect = [&]() {
+        SymbolStats total;
+        for (auto& traffic : traffics) {
+            SymbolStats s = engine.GetStats(traffic.symbol);
+            total.OrdersProcessed += s.OrdersProcessed;
+            total.OrdersRejected  += s.OrdersRejected;
+            total.QueueDrops      += s.QueueDrops;
+            total.TradesTotal     += s.TradesTotal;
+            total.VolumeTotal     += s.VolumeTotal;
+        }
+        return total;
+    };
+
+    // Wait until every submitted order is accounted for: processed, rejected or dropped.
     std::cout << "\nGenerare oprita, astept finalizarea procesarii...\n";
-    std::this_thread::sleep_for(2s);
+    SymbolStats stats = collect();
+    const auto drainDeadline = std::chrono::steady_clock::now() + 30s;
+    while (static_cast<long long>(stats.OrdersProcessed + stats.OrdersRejected + stats.QueueDrops)
+               < totalOrdersSubmitted
+           && std::chrono::steady_clock::now() < drainDeadline) {
+        std::this_thread::sleep_for(1ms);
+        stats = collect();
+    }
+    auto endTimeProcessing = std::chrono::steady_clock::now();
 
     double generationElapsedSec =
             std::chrono::duration<double>(endTimeGeneration - startTime).count();
+    double processingElapsedSec =
+            std::chrono::duration<double>(endTimeProcessing - startTime).count();
 
-    long long totalMatches = 0;
-    long long totalVolume = 0;
     long long totalRemainingInBook = 0;
     for (auto& traffic : traffics) {
-        auto trades = engine.GetTradesHistory(traffic.symbol);
-        totalMatches += static_cast<long long>(trades.size());
-        for (const auto& trade : trades) totalVolume += trade.GetQuantity();
         totalRemainingInBook += static_cast<long long>(engine.GetOrders(traffic.symbol).size());
     }
 
-    std::cout << "\n=== REZULTATE (masurate pe " << std::fixed << std::setprecision(1)
-              << generationElapsedSec << "s de generare sustinuta) ===\n";
-    std::cout << "Orders/sec:  " << std::fixed << std::setprecision(1)
-              << (totalOrdersSubmitted / generationElapsedSec) << "/s"
-              << "  (total: " << totalOrdersSubmitted << ")\n";
-    std::cout << "Matches/sec: "
-              << (totalMatches / generationElapsedSec) << "/s"
-              << "  (total: " << totalMatches << ")\n";
-    std::cout << "Volume/sec:  "
-              << (totalVolume / generationElapsedSec) << "/s"
-              << "  (total: " << totalVolume << ")\n";
-    std::cout << "Cancels/sec: "
-              << (totalCancelsSubmitted / generationElapsedSec) << "/s"
+    std::cout << "\n=== REZULTATE (generare " << std::fixed << std::setprecision(1)
+              << generationElapsedSec << "s, procesare completa in "
+              << processingElapsedSec << "s) ===\n";
+    std::cout << "Orders processed/sec: " << (stats.OrdersProcessed / processingElapsedSec) << "/s"
+              << "  (total: " << stats.OrdersProcessed << ")\n";
+    std::cout << "Matches/sec:          " << (stats.TradesTotal / processingElapsedSec) << "/s"
+              << "  (total: " << stats.TradesTotal << ")\n";
+    std::cout << "Volume/sec:           " << (stats.VolumeTotal / processingElapsedSec) << "/s"
+              << "  (total: " << stats.VolumeTotal << ")\n";
+    std::cout << "Cancels/sec:          " << (totalCancelsSubmitted / generationElapsedSec) << "/s"
               << "  (total: " << totalCancelsSubmitted << ")\n";
+    std::cout << "Orders submitted:     " << totalOrdersSubmitted << "\n";
+    std::cout << "Dropped (queue full): " << stats.QueueDrops << "\n";
+    std::cout << "Rejected (pool full): " << stats.OrdersRejected << "\n";
     std::cout << "Ordine ramase in carte la final: " << totalRemainingInBook
               << "  (ar trebui sa fie MIC, nu saturat la capacitate)\n";
 

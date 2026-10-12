@@ -61,6 +61,12 @@ public:
     std::vector<Trade> GetTradesHistory(const std::string& Symbol);
 
     /**
+     * @brief Lifetime counters for a symbol (processed, rejected, dropped, trades, volume).
+     * @param Symbol The ticker symbol.
+     */
+    SymbolStats GetStats(const std::string& Symbol) { return Router_.GetStats(Symbol); }
+
+    /**
      * @brief Retrieves all orders for a symbol.
      * @param Symbol The ticker symbol.
      * @return Vector of all orders (any status).

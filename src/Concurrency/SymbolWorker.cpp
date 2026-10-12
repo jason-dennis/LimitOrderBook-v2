@@ -10,6 +10,9 @@ SymbolWorker::~SymbolWorker() {
     }
 }
 void SymbolWorker::Run(){
+    std::vector<TradePod> trades;   // reused for every order: no per-order allocation
+    trades.reserve(256);
+
     while(Running_.load()){
         try{
             auto result = Resources_.Queue.Pop();
@@ -21,16 +24,26 @@ void SymbolWorker::Run(){
             auto tmpOrder = *result;
             std::unique_lock<std::shared_mutex>lock(Resources_.StateMutex);
             auto index = Resources_.Pool.Allocate();
-            if(index == UINT32_MAX) continue;
+            if(index == UINT32_MAX) {
+                Resources_.OrdersRejected.fetch_add(1, std::memory_order_relaxed);
+                continue;
+            }
 
             auto& slot = Resources_.Pool.Get(index);
             slot = tmpOrder;
             slot.OrderId = OrderId++;
 
-            std::vector<TradePod> trades;
-
+            trades.clear();
             Resources_.Engine.ProcessOrder(index,trades);
-            Resources_.Trades.insert(Resources_.Trades.end(),trades.begin(),trades.end());
+
+            uint64_t volume = 0;
+            for (const auto& trade : trades) {
+                Resources_.Trades.Push(trade);
+                volume += trade.Quantity;
+            }
+            Resources_.TradesTotal.fetch_add(trades.size(), std::memory_order_relaxed);
+            Resources_.VolumeTotal.fetch_add(volume, std::memory_order_relaxed);
+            Resources_.OrdersProcessed.fetch_add(1, std::memory_order_relaxed);
 
         } catch (const std::exception& e) {
             fprintf(stderr, "EXCEPTIE PRINSA in SymbolWorker::Run: %s\n", e.what());
