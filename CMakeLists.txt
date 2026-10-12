@@ -191,13 +191,16 @@ gtest_discover_tests(run_tests)
 add_executable(run_benchmarks
         Tests/benchmarks/OrderBookBenchmarkv2.cpp
         Tests/benchmarks/MultithreadedBenchmark.cpp
-        Tests/benchmarks/LatencyBench.cpp
 )
 target_link_libraries(run_benchmarks PRIVATE trading_lib benchmark::benchmark_main)
 # ------------ Full Test ------------
 add_executable(FullTest Tests/FullTest.cpp)
 target_include_directories(FullTest PRIVATE include)
 target_link_libraries(FullTest PRIVATE trading_lib)
+
+add_executable(latency_bench Tests/benchmarks/LatencyBench.cpp)
+target_include_directories(latency_bench PRIVATE include)
+target_link_libraries(latency_bench PRIVATE trading_lib)
 
 # --- Emscripten ---------------------------------------------------------------
 if (EMSCRIPTEN)
