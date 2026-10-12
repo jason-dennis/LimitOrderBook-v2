@@ -73,6 +73,24 @@ void TcpServer::Stop() {
     if (acceptThread_.joinable()) {
         acceptThread_.join();
     }
+
+    // The accept thread is gone, so no new connections can appear.
+    // Wake every connection blocked in recv() (it returns 0 after shutdown),
+    // then wait for all connection threads to finish.
+    std::vector<std::thread> threads;
+    {
+        std::lock_guard<std::mutex> lock(connMutex_);
+        for (int fd : clientSockets_) {
+            shutdown(fd, SHUT_RDWR);
+        }
+        threads.swap(connThreads_);
+    }
+    // Join without holding connMutex_: HandleConnection needs it to exit.
+    for (auto& t : threads) {
+        if (t.joinable()) {
+            t.join();
+        }
+    }
 }
 
 void TcpServer::AcceptLoop() {
@@ -90,7 +108,9 @@ void TcpServer::AcceptLoop() {
         }
 
         printf("Connection accepted!\n");
-        std::thread(&TcpServer::HandleConnection, this, new_fd).detach();
+        std::lock_guard<std::mutex> lock(connMutex_);
+        clientSockets_.insert(new_fd);
+        connThreads_.emplace_back(&TcpServer::HandleConnection, this, new_fd);
     }
 }
 
@@ -131,5 +151,9 @@ void TcpServer::HandleConnection(int clientSocket) {
         }
     }
 
+    // Remove and close under the same lock that Stop() uses, so Stop() never
+    // calls shutdown() on a descriptor that was already closed and reused.
+    std::lock_guard<std::mutex> lock(connMutex_);
+    clientSockets_.erase(clientSocket);
     close(clientSocket);
 }

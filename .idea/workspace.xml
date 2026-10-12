@@ -45,8 +45,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3d535dd-94c8-4bea-83c1-1ab4a636eead" name="Changes" comment="Add LatencyBench.cpp">
+    <list default="true" id="e3d535dd-94c8-4bea-83c1-1ab4a636eead" name="Changes" comment="solve memory problems">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Networking/TcpServer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Networking/TcpServer.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,8 +115,10 @@
     &quot;ctest.advertisement.all.test.configuration.is.created&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;python.packages.toolwindow.project.migrated.to.right.top.v2&quot;: &quot;true&quot;,
@@ -123,12 +126,12 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\denni\OneDrive\Desktop\LimitOrderBook-v2" />
+    </key>
+  </component>
   <component name="RunManager" selected="CTest Application.All CTest">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="run_tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LimitOrderBook" TARGET_NAME="run_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LimitOrderBook" RUN_TARGET_NAME="run_tests" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -227,13 +230,12 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="CMake Application.glfw" />
-      <item itemvalue="CMake Application.uninstall" />
-      <item itemvalue="CMake Application.update_mappings" />
+      <item itemvalue="Google Test.run_tests" />
       <item itemvalue="CMake Application.FullTest" />
       <item itemvalue="CMake Application.LimitOrderBook" />
       <item itemvalue="CMake Application.benchmark" />
       <item itemvalue="CMake Application.benchmark_main" />
+      <item itemvalue="CMake Application.glfw" />
       <item itemvalue="CMake Application.gmock" />
       <item itemvalue="CMake Application.gmock_main" />
       <item itemvalue="CMake Application.gtest" />
@@ -244,8 +246,9 @@
       <item itemvalue="CMake Application.tcp_server_test" />
       <item itemvalue="CMake Application.trading_lib" />
       <item itemvalue="CMake Application.trading_lib_cov" />
+      <item itemvalue="CMake Application.uninstall" />
+      <item itemvalue="CMake Application.update_mappings" />
       <item itemvalue="CTest Application.All CTest" />
-      <item itemvalue="Google Test.run_tests" />
     </list>
   </component>
   <component name="SelectedDebugProfileService">{
@@ -293,7 +296,8 @@
     <MESSAGE value="repair BinaryOrderBookStorage.cpp" />
     <MESSAGE value="Add IdIndexMap.h" />
     <MESSAGE value="Add LatencyBench.cpp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add LatencyBench.cpp" />
+    <MESSAGE value="solve memory problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="solve memory problems" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

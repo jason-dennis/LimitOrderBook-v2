@@ -552,7 +552,10 @@ TEST(CoreEngineTest, SaveThenLoad_SkipsFullyFilledOrders) {
         engine.CreateOrder(100.0f, 10, "LIMIT", symbol, "GTC", 2, "BUY");
         engine.CreateOrder(105.0f, 5, "LIMIT", symbol, "GTC", 3, "SELL");
 
-        ASSERT_TRUE(WaitUntil([&]() { return engine.GetOrders(symbol).size() == 1; }, 2s));
+        ASSERT_TRUE(WaitUntil([&]() {
+    return engine.GetStats(symbol).OrdersProcessed == 3 &&
+           engine.GetOrders(symbol).size() == 1;
+}, 2s));
         engine.Save();
     }
 
