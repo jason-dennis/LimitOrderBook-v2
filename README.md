@@ -151,7 +151,7 @@ main.cpp
 
 - **One worker thread per symbol.** It takes new orders from that symbol's queue and runs the matching.
 - **A lock-free queue per symbol.** Anything that sends orders (the UI, TCP clients, the simulators) can push at the same time without blocking each other. When the queue is empty, the worker spins and calls `yield`.
-- **A lock per symbol** (`std::shared_mutex`). The worker holds it while it processes an order, so the UI can safely read the book. Cancels also take it, from the thread that sends them. This lock is the main thing I want to remove next (see [Known Limitations](#known-limitations-and-next-steps)).
+- **A lock per symbol** (`std::shared_mutex`). The worker holds it while it processes an order, so the UI can safely read the book. Cancels also take it, from the thread that sends them. This lock is the main thing I want to remove next.
 - **One registry lock**, only used when a new symbol is created.
 
 ### Why a Bitmap Index
