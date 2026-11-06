@@ -42,3 +42,13 @@
 
 cmake-build-*
 .idea/
+
+# Build
+build*/
+
+# macOS
+.DS_Store
+
+# Fișiere generate la rulare
+orders.csv
+imgui.ini
