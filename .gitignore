@@ -49,6 +49,6 @@ build*/
 # macOS
 .DS_Store
 
-# Fișiere generate la rulare
+# Generated at runtime
 orders.csv
 imgui.ini
